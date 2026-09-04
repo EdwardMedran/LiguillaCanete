@@ -1,15 +1,18 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Liguilla de Básquetbol Cañete - Temporada 2025</title>
-<!-- Tailwind CSS v3 CDN -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts: Montserrat & Inter -->
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
-<script>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Liguilla de Básquetbol Cañete - Temporada 2025</title>
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet">
+  <!-- Tailwind Configuration -->
+  <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -35,348 +38,480 @@
       }
     }
   </script>
-<!-- Custom Styles: Typography & Animations -->
-<style data-purpose="custom-typography">
+  <!-- Custom Styles: Typography & Animations -->
+  <style data-purpose="custom-typography">
     .font-sport {
       font-family: 'Montserrat', Impact, sans-serif;
       text-transform: uppercase;
       letter-spacing: -0.02em;
     }
+
     .text-glow-gold {
       text-shadow: 0 0 20px rgba(229, 184, 66, 0.45);
     }
+
     .text-glow-blue {
       text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
     }
   </style>
-<!-- Custom Styles: Visual Effects & Borders -->
-<style data-purpose="visual-accents">
+  <!-- Custom Styles: Visual Effects & Borders -->
+  <style data-purpose="visual-accents">
     .gold-gradient-border {
       position: relative;
       border: 1px solid rgba(229, 184, 66, 0.25);
       background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
     }
+
     .gold-gradient-border:hover {
       border-color: rgba(229, 184, 66, 0.6);
       box-shadow: 0 10px 30px -10px rgba(229, 184, 66, 0.2);
     }
+
     .hero-glow-bg {
       background: radial-gradient(circle at 75% 35%, rgba(229, 184, 66, 0.12) 0%, rgba(37, 99, 235, 0.1) 40%, rgba(11, 15, 25, 0) 70%);
     }
+
     .table-row-hover:hover {
       background-color: rgba(229, 184, 66, 0.05);
     }
   </style>
 </head>
+
 <body class="bg-[#0B0F19] text-gray-100 font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen">
-<!-- BEGIN: MainHeader -->
-<header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-<!-- Brand & Official Logo -->
-<a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="img/Logo liguilla sin fondo.png"><img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072gen3gEq7kX_nMgArhrW6VGHZ1ppVTgfKF15QKRA4Q3dJJHaJslkiOEKlLH765MnLQVoxfutb__-LvTrV86VMPjgaiyYstSuRFnTjZorDWcjBFnuocV4403alWz-xIzTVg1rY5Ys1V4aulI6G7qSAupIyBN3-B9-50_5hDybRVIsrW8JXTf5juOpMJY48da_IviuB0DpVqMP_9FCYj0eSQqC6c5AQxqqkPWL9LIaEQUocTF1ba_Q-1LEkU9wWjcpw"><div class="flex flex-col"><span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">LIGUILLA CAÑETE</span><span class="text-[10px] font-semibold tracking-widest text-brand-gold uppercase mt-0.5">Básquetbol de Primera</span></div></a>
-<!-- Desktop Navigation Links -->
-<nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
-<a class="hover:text-brand-gold transition-colors py-1" href="equipos.html">Equipos</a>
-<a class="hover:text-brand-gold transition-colors py-1" href="cronograma.html">Fixture</a>
-<a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="#posiciones">POSICIONES</a>
-<a class="hover:text-brand-gold transition-colors py-1" href="#resultados">Resultados &amp; MVP</a>
-<a class="hover:text-brand-gold transition-colors py-1" href="#galeria">Galería</a>
-</nav>
-<!-- Action Area & Live Indicator -->
-<div class="flex items-center gap-3 sm:gap-4"><a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="#posiciones">POSICIONES</a><button id="mobile-menu-toggle" aria-label="Abrir menú de navegación" class="p-2 rounded-lg bg-gray-900/80 border border-gray-800 text-gray-300 hover:text-brand-gold hover:border-brand-gold/60 focus:outline-none focus:border-brand-gold transition-all active:scale-95"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
-</div>
-</header><div id="mobile-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300"><div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div><div class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424] border-l border-brand-gold/30 shadow-2xl flex flex-col p-6 z-10"><div class="flex items-center justify-between pb-4 border-b border-gray-800"><div class="flex items-center gap-2"><span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span></div><button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900 transition-colors"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button></div><nav class="mt-6 flex flex-col gap-3"><a href="cronograma.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>Cronograma de Juegos</a><a href="equipos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Equipos Participantes</a></nav><div class="mt-auto pt-6 border-t border-gray-800 text-xs text-gray-500 text-center"><span class="text-brand-gold font-bold">Liguilla Cañete 2026</span><p class="mt-1 text-[11px]">Polideportivo Beto Di Laura</p></div></div></div>
-<!-- END: MainHeader -->
-<!-- BEGIN: HeroSection -->
-<section aria-label="Hero Section" class="relative overflow-hidden hero-glow-bg border-b border-gray-800/60 py-8 px-4"><div class="max-w-7xl mx-auto"><div class="flex flex-col gap-8 items-center"><div class="w-full flex flex-col items-center text-center z-10"><div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-[10px] font-bold tracking-wider uppercase mb-4 backdrop-blur-sm"><span class="h-1.5 w-1.5 rounded-full bg-brand-gold"></span>TEMPORADA 2026 • POLIDEPORTIVO BETO DI LAURA</div><h1 class="font-sport font-black text-3xl text-white leading-tight tracking-tight uppercase mb-3">EL MEJOR BÁSQUETBOL DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-200 to-brand-goldLight text-glow-gold">CAÑETE</span> EN UNA SOLA CANCHA</h1><p class="text-sm text-gray-300 font-normal leading-relaxed mb-6 max-w-md">Ocho semanas de competencia intensa, jugadas espectaculares y playoffs en la cancha única de la comuna.</p><div class="w-full flex flex-col gap-3 mb-6"><a class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-sport font-extrabold text-black bg-gradient-to-r from-brand-gold via-amber-400 to-brand-goldLight shadow-xl shadow-brand-gold/25 text-xs uppercase tracking-wider active:scale-95 transition-all" href="#posiciones"><svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>Ver Tabla de Posiciones</a></div><div class="w-full grid grid-cols-2 gap-2.5"><div class="bg-brand-darkCard/80 border border-gray-800 rounded-xl p-3 text-center"><span class="block font-sport font-black text-xl text-brand-gold">8</span><span class="text-[10px] font-semibold text-gray-400 uppercase">Equipos</span></div><div class="bg-brand-darkCard/80 border border-gray-800 rounded-xl p-3 text-center"><span class="block font-sport font-black text-xl text-brand-gold">8+PO</span><span class="text-[10px] font-semibold text-gray-400 uppercase">Jornadas</span></div></div></div><div class="w-full flex justify-center items-center relative"><div class="absolute w-64 h-64 rounded-full bg-brand-gold/15 blur-3xl -z-10 pointer-events-none"></div><div class="relative p-5 rounded-3xl bg-gradient-to-b from-brand-darkSurface/90 to-brand-darkBg/95 border border-brand-gold/30 shadow-2xl shadow-black/80 flex flex-col items-center text-center w-full max-w-xs mx-auto"><div class="relative group"><div class="absolute -inset-4 bg-gradient-to-r from-brand-gold/20 to-orange-500/20 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div><img alt="Trofeo y Escudo Cañete Basketball" class="relative h-56 w-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyGcXNIEgvPZgin_9CF1yIG9qUF0cHOT83ZJ8kcUMkXfHuPstlGFf0d9YB79m2JAGbgSWBKTtycsLuThXbGo71x-3-j0EGhYgERPGg2A3ihAnrV6oaKrP4s6AtkU1yswwrUSjVgtcNw1NGZTziIfUYWAzyGWiJ-Bc9ucbhF1-4FvXhKjfuU0abcKbdQlMx47DAhEIfNJQRl-tLoQUaMWhXkL8dc88ng4FYGD0hwXTgr0ZeqcetrKMSSu0apidUZtf1tA"></div><div class="mt-4 px-3 py-1.5 rounded-lg bg-gray-900/90 border border-brand-gold/30 flex items-center justify-center gap-2 w-full"><span class="inline-block w-2 h-2 rounded-full bg-amber-400"></span><span class="text-[11px] font-bold text-brand-gold tracking-wider uppercase font-sport">SEDE ÚNICA: BETO DI LAURA</span></div></div></div></div></div></section>
-<!-- END: HeroSection -->
-<!-- BEGIN: TeamsSection -->
-
-<!-- END: TeamsSection -->
-<!-- BEGIN: FixtureSection -->
-
-<!-- END: FixtureSection -->
-<!-- BEGIN: StandingsSection -->
-<section aria-label="Tabla de Posiciones" class="py-16 sm:py-20 bg-brand-darkSurface/40 border-b border-gray-800/60" id="posiciones">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Section Title -->
-<div class="text-center max-w-2xl mx-auto mb-12">
-<span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Estadísticas Oficiales</span>
-<h2 class="font-sport font-black text-3xl sm:text-4xl text-white mt-1 uppercase">
-          TABLA GENERAL DE POSICIONES
-        </h2>
-<div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
-<p class="text-gray-400 text-sm mt-3">
-          Clasifican a la ronda final de Playoffs los <span class="text-brand-gold font-bold">4 mejores lugares</span> al cabo de 8 fechas.
-        </p>
-</div>
-<!-- Responsive Table Card -->
-<div class="bg-brand-darkSurface border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
-<div class="overflow-x-auto">
-<table class="w-full text-left text-sm whitespace-nowrap">
-<!-- Table Header -->
-<thead class="bg-gray-900/90 text-gray-400 font-sport uppercase tracking-wider text-xs border-b border-gray-800">
-<tr>
-<th class="py-4 px-4 text-center w-14" scope="col">Pos</th>
-<th class="py-4 px-6" scope="col">Equipo</th>
-<th class="py-4 px-4 text-center" scope="col">PJ</th>
-<th class="py-4 px-4 text-center" scope="col">PG</th>
-<th class="py-4 px-4 text-center" scope="col">PP</th>
-<th class="py-4 px-4 text-center" scope="col">PF</th>
-<th class="py-4 px-4 text-center" scope="col">PC</th>
-<th class="py-4 px-4 text-center" scope="col">DIF</th>
-<th class="py-4 px-6 text-center font-black text-brand-gold" scope="col">PTS</th>
-</tr>
-</thead>
-<!-- Table Body -->
-<tbody class="divide-y divide-gray-800/60 font-sans">
-<!-- Pos 1 (Playoffs) -->
-<tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
-<td class="py-4 px-4 text-center font-sport font-black text-brand-gold">1</td>
-<td class="py-4 px-6 font-bold text-white flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-blue-950 border border-blue-500/40 flex items-center justify-center font-sport text-xs text-blue-300">TC</div>
-<span class="">Titanes Cañete</span>
-<span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">5</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">1</td>
-<td class="py-4 px-4 text-center font-mono">482</td>
-<td class="py-4 px-4 text-center font-mono">410</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+72</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
-</tr>
-<!-- Pos 2 (Playoffs) -->
-<tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
-<td class="py-4 px-4 text-center font-sport font-black text-brand-gold">2</td>
-<td class="py-4 px-6 font-bold text-white flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-amber-950 border border-amber-500/40 flex items-center justify-center font-sport text-xs text-amber-300">HV</div>
-<span class="">Halcones del Valle</span>
-<span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">5</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">1</td>
-<td class="py-4 px-4 text-center font-mono">465</td>
-<td class="py-4 px-4 text-center font-mono">420</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+45</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
-</tr>
-<!-- Pos 3 (Playoffs) -->
-<tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
-<td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">3</td>
-<td class="py-4 px-6 font-bold text-white flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-purple-950 border border-purple-500/40 flex items-center justify-center font-sport text-xs text-purple-300">BM</div>
-<span class="">Black Mambas</span>
-<span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">4</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">2</td>
-<td class="py-4 px-4 text-center font-mono">450</td>
-<td class="py-4 px-4 text-center font-mono">430</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+20</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
-</tr>
-<!-- Pos 4 (Playoffs) -->
-<tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
-<td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">4</td>
-<td class="py-4 px-6 font-bold text-white flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-slate-800 border border-slate-500/40 flex items-center justify-center font-sport text-xs text-slate-300">LS</div>
-<span class="">Lobos del Sur</span>
-<span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">4</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">2</td>
-<td class="py-4 px-4 text-center font-mono">432</td>
-<td class="py-4 px-4 text-center font-mono">415</td>
-<td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+17</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
-</tr>
-<!-- Pos 5 -->
-<tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-<td class="py-4 px-4 text-center font-sport text-gray-400">5</td>
-<td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-yellow-950 border border-yellow-500/40 flex items-center justify-center font-sport text-xs text-yellow-300">WI</div>
-<span class="">Warriors Imperial</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400">3</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">3</td>
-<td class="py-4 px-4 text-center font-mono">418</td>
-<td class="py-4 px-4 text-center font-mono">422</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">-4</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">9</td>
-</tr>
-<!-- Pos 6 -->
-<tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-<td class="py-4 px-4 text-center font-sport text-gray-400">6</td>
-<td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-orange-950 border border-orange-500/40 flex items-center justify-center font-sport text-xs text-orange-300">FB</div>
-<span class="">Fénix Basket</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400">2</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">4</td>
-<td class="py-4 px-4 text-center font-mono">405</td>
-<td class="py-4 px-4 text-center font-mono">440</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">-35</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">8</td>
-</tr>
-<!-- Pos 7 -->
-<tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-<td class="py-4 px-4 text-center font-sport text-gray-400">7</td>
-<td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-red-950 border border-red-500/40 flex items-center justify-center font-sport text-xs text-red-300">GL</div>
-<span class="">Gladiadores</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400">1</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">5</td>
-<td class="py-4 px-4 text-center font-mono">390</td>
-<td class="py-4 px-4 text-center font-mono">445</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">-55</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
-</tr>
-<!-- Pos 8 -->
-<tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-<td class="py-4 px-4 text-center font-sport text-gray-400">8</td>
-<td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-<div class="w-7 h-7 rounded bg-teal-950 border border-teal-500/40 flex items-center justify-center font-sport text-xs text-teal-300">AP</div>
-<span class="">Águilas del Puerto</span>
-</td>
-<td class="py-4 px-4 text-center font-mono">6</td>
-<td class="py-4 px-4 text-center font-mono text-green-400">1</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">5</td>
-<td class="py-4 px-4 text-center font-mono">380</td>
-<td class="py-4 px-4 text-center font-mono">440</td>
-<td class="py-4 px-4 text-center font-mono text-red-400">-60</td>
-<td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="p-4 bg-gray-900/60 border-t border-gray-800 flex flex-wrap items-center justify-between text-xs text-gray-400 gap-3">
-<div class="flex items-center gap-4">
-<span class="flex items-center gap-1.5">
-<span class="w-3 h-3 rounded bg-brand-gold inline-block"></span> Clasificación a Semifinales
-            </span>
-<span class="flex items-center gap-1.5">
-<span class="w-3 h-3 rounded bg-brand-accentBlue inline-block"></span> Repechaje Play-In
-            </span>
-</div>
-<span class="">Actualizado al Sábado anterior tras el cierre de planilla</span>
-</div>
-</div>
-</div>
-</section>
-<!-- END: StandingsSection -->
-<!-- BEGIN: ResultsAndMVPSection -->
-<section aria-label="Resultados y MVP" class="py-16 sm:py-20 bg-[#0B0F19] border-b border-gray-800/60" id="resultados"><div class="max-w-7xl mx-auto px-4"><div class="flex flex-col gap-8"><div class="flex flex-col"><div class="text-center mb-6"><span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Marcadores Finales</span><h2 class="font-sport font-black text-2xl text-white mt-1 uppercase">RESUMEN DEL ÚLTIMO SÁBADO</h2><div class="w-12 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div><p class="text-xs text-gray-400 mt-2">Sede: Polideportivo Beto Di Laura</p></div><div class="space-y-3"><div class="bg-brand-darkSurface border border-gray-800 rounded-2xl p-4 flex flex-col gap-2.5"><div class="flex justify-between items-center text-xs text-gray-400"><span class="font-sport text-brand-gold font-bold">FECHA 4 • PARTIDO DESTACADO</span><span class="">Beto Di Laura</span></div><div class="flex items-center justify-between"><div class="flex-1"><div class="flex justify-between items-center mb-0.5"><span class="font-sport font-bold text-white text-sm">Titanes Cañete</span><span class="font-sport font-black text-lg text-brand-gold">88</span></div><span class="text-[11px] text-gray-400">M. Valenzuela (28 pts, 6 ast)</span></div><div class="px-3 text-xs font-black text-gray-600">VS</div><div class="flex-1 text-right"><div class="flex justify-between items-center mb-0.5 flex-row-reverse"><span class="font-sport font-bold text-white text-sm">Lobos del Sur</span><span class="font-sport font-black text-lg text-gray-400">82</span></div><span class="text-[11px] text-gray-400">R. Salazar (22 pts, 9 reb)</span></div></div></div><div class="bg-brand-darkSurface border border-gray-800 rounded-2xl p-4 flex flex-col gap-2.5"><div class="flex justify-between items-center text-xs text-gray-400"><span class="font-sport text-brand-gold font-bold">FECHA 4</span><span class="">Beto Di Laura</span></div><div class="flex items-center justify-between"><div class="flex-1"><div class="flex justify-between items-center mb-0.5"><span class="font-sport font-bold text-white text-sm">Halcones del Valle</span><span class="font-sport font-black text-lg text-brand-gold">94</span></div><span class="text-[11px] text-gray-400">Carlos Mendoza (34 pts)</span></div><div class="px-3 text-xs font-black text-gray-600">VS</div><div class="flex-1 text-right"><div class="flex justify-between items-center mb-0.5 flex-row-reverse"><span class="font-sport font-bold text-white text-sm">Black Mambas</span><span class="font-sport font-black text-lg text-gray-400">89</span></div><span class="text-[11px] text-gray-400">E. Morales (31 pts)</span></div></div></div></div></div><div class="w-full"><div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col"><div class="flex items-center justify-between mb-3"><span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">MVP DE LA FECHA 4</span><span aria-hidden="true" class="text-xl">👑</span></div><div><h3 class="font-sport font-black text-2xl text-white leading-tight">CARLOS MENDOZA</h3><p class="text-brand-gold font-semibold text-xs mt-0.5 uppercase tracking-wide">Halcones del Valle • Alero Titular #10</p></div><div class="my-4 py-4 border-y border-brand-gold/20 flex items-center gap-4"><div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-gold to-amber-200 p-0.5 shadow-lg"><div class="w-full h-full bg-brand-darkSurface rounded-2xl flex items-center justify-center font-sport font-black text-xl text-brand-gold">#10</div></div><p class="flex-1 text-xs text-gray-300 italic leading-snug">"Lideró la remontada encestando 14 puntos en el último cuarto en el Polideportivo Beto Di Laura."</p></div><div class="grid grid-cols-4 gap-2 text-center bg-gray-950/70 p-3 rounded-xl border border-gray-800"><div><span class="block font-sport font-black text-xl text-white">34</span><span class="text-[10px] uppercase font-bold text-gray-400">Puntos</span></div><div><span class="block font-sport font-black text-xl text-brand-gold">8</span><span class="text-[10px] uppercase font-bold text-gray-400">Rebotes</span></div><div><span class="block font-sport font-black text-xl text-white">6</span><span class="text-[10px] uppercase font-bold text-gray-400">Asist.</span></div><div><span class="block font-sport font-black text-xl text-brand-gold">4</span><span class="text-[10px] uppercase font-bold text-gray-400">Triples</span></div></div></div></div></div></div></section>
-<!-- END: ResultsAndMVPSection -->
-<!-- BEGIN: GallerySection -->
-
-<!-- END: GallerySection -->
-<!-- BEGIN: SponsorsSection -->
-<section aria-label="Patrocinadores" class="py-12 bg-gray-950 border-b border-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h3 class="text-xs font-sport font-bold tracking-widest text-gray-500 uppercase mb-8">
-        PATROCINADORES OFICIALES &amp; AUSPICIADORES
-      </h3>
-<div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
-<!-- Sponsor 1 -->
-<div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
-<span class="text-brand-gold">⚡</span> POWERENERGY DRINKS
+  <!-- BEGIN: MainHeader -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand & Official Logo -->
+      <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="#"><img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072gen3gEq7kX_nMgArhrW6VGHZ1ppVTgfKF15QKRA4Q3dJJHaJslkiOEKlLH765MnLQVoxfutb__-LvTrV86VMPjgaiyYstSuRFnTjZorDWcjBFnuocV4403alWz-xIzTVg1rY5Ys1V4aulI6G7qSAupIyBN3-B9-50_5hDybRVIsrW8JXTf5juOpMJY48da_IviuB0DpVqMP_9FCYj0eSQqC6c5AQxqqkPWL9LIaEQUocTF1ba_Q-1LEkU9wWjcpw">
+        <div class="flex flex-col"><span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">LIGUILLA CAÑETE</span><span class="text-[10px] font-semibold tracking-widest text-brand-gold uppercase mt-0.5">Básquetbol de Primera</span></div>
+      </a>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
+        <a class="hover:text-brand-gold transition-colors py-1" href="equipos.html">Equipos</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="cronograma.html">Fixture</a>
+        <a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="#posiciones">POSICIONES</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#resultados">Resultados &amp; MVP</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#galeria">Galería</a>
+      </nav>
+      <!-- Action Area & Live Indicator -->
+      <div class="flex items-center gap-3 sm:gap-4"><a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="#posiciones">POSICIONES</a><button id="mobile-menu-toggle" aria-label="Abrir menú de navegación" class="p-2 rounded-lg bg-gray-900/80 border border-gray-800 text-gray-300 hover:text-brand-gold hover:border-brand-gold/60 focus:outline-none focus:border-brand-gold transition-all active:scale-95"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg></button></div>
+    </div>
+  </header>
+  <div id="mobile-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300">
+    <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424] border-l border-brand-gold/30 shadow-2xl flex flex-col p-6 z-10">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+        <div class="flex items-center gap-2"><span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span></div><button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900 transition-colors"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg></button>
+      </div>
+      <nav class="mt-6 flex flex-col gap-3"><a href="cronograma.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>Cronograma de Juegos</a><a href="equipos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>Equipos Participantes</a></nav>
+      <div class="mt-auto pt-6 border-t border-gray-800 text-xs text-gray-500 text-center"><span class="text-brand-gold font-bold">Liguilla Cañete 2026</span>
+        <p class="mt-1 text-[11px]">Polideportivo Beto Di Laura</p>
+      </div>
+    </div>
+  </div>
+  <!-- END: MainHeader -->
+  <!-- BEGIN: HeroSection -->
+  <section aria-label="Hero Section" class="relative overflow-hidden hero-glow-bg border-b border-gray-800/60 py-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col gap-8 items-center">
+        <div class="w-full flex flex-col items-center text-center z-10">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-[10px] font-bold tracking-wider uppercase mb-4 backdrop-blur-sm"><span class="h-1.5 w-1.5 rounded-full bg-brand-gold"></span>TEMPORADA 2026 • POLIDEPORTIVO BETO DI LAURA</div>
+          <h1 class="font-sport font-black text-3xl text-white leading-tight tracking-tight uppercase mb-3">EL MEJOR BÁSQUETBOL DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-200 to-brand-goldLight text-glow-gold">CAÑETE</span> EN UNA SOLA CANCHA</h1>
+          <p class="text-sm text-gray-300 font-normal leading-relaxed mb-6 max-w-md">Ocho semanas de competencia intensa, jugadas espectaculares y playoffs en la cancha única de la comuna.</p>
+          <div class="w-full flex flex-col gap-3 mb-6"><a class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-sport font-extrabold text-black bg-gradient-to-r from-brand-gold via-amber-400 to-brand-goldLight shadow-xl shadow-brand-gold/25 text-xs uppercase tracking-wider active:scale-95 transition-all" href="#posiciones"><svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+              </svg>Ver Tabla de Posiciones</a></div>
+          <div class="w-full grid grid-cols-2 gap-2.5">
+            <div class="bg-brand-darkCard/80 border border-gray-800 rounded-xl p-3 text-center"><span class="block font-sport font-black text-xl text-brand-gold">8</span><span class="text-[10px] font-semibold text-gray-400 uppercase">Equipos</span></div>
+            <div class="bg-brand-darkCard/80 border border-gray-800 rounded-xl p-3 text-center"><span class="block font-sport font-black text-xl text-brand-gold">8+PO</span><span class="text-[10px] font-semibold text-gray-400 uppercase">Jornadas</span></div>
+          </div>
         </div>
-<!-- Sponsor 2 -->
-<div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
-<span class="text-blue-500">🏀</span> CAÑETE SPORT STORE
+        <div class="w-full flex justify-center items-center relative">
+          <div class="absolute w-64 h-64 rounded-full bg-brand-gold/15 blur-3xl -z-10 pointer-events-none"></div>
+          <div class="relative p-5 rounded-3xl bg-gradient-to-b from-brand-darkSurface/90 to-brand-darkBg/95 border border-brand-gold/30 shadow-2xl shadow-black/80 flex flex-col items-center text-center w-full max-w-xs mx-auto">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-brand-gold/20 to-orange-500/20 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div><img alt="Trofeo y Escudo Cañete Basketball" class="relative h-56 w-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyGcXNIEgvPZgin_9CF1yIG9qUF0cHOT83ZJ8kcUMkXfHuPstlGFf0d9YB79m2JAGbgSWBKTtycsLuThXbGo71x-3-j0EGhYgERPGg2A3ihAnrV6oaKrP4s6AtkU1yswwrUSjVgtcNw1NGZTziIfUYWAzyGWiJ-Bc9ucbhF1-4FvXhKjfuU0abcKbdQlMx47DAhEIfNJQRl-tLoQUaMWhXkL8dc88ng4FYGD0hwXTgr0ZeqcetrKMSSu0apidUZtf1tA">
+            </div>
+            <div class="mt-4 px-3 py-1.5 rounded-lg bg-gray-900/90 border border-brand-gold/30 flex items-center justify-center gap-2 w-full"><span class="inline-block w-2 h-2 rounded-full bg-amber-400"></span><span class="text-[11px] font-bold text-brand-gold tracking-wider uppercase font-sport">SEDE ÚNICA: BETO DI LAURA</span></div>
+          </div>
         </div>
-<!-- Sponsor 3 -->
-<div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
-<span class="text-red-500">🏛️</span> COLISEO MUNICIPAL
+      </div>
+    </div>
+  </section>
+  <!-- END: HeroSection -->
+  <!-- BEGIN: TeamsSection -->
+  <!-- END: TeamsSection -->
+  <!-- BEGIN: FixtureSection -->
+  <!-- END: FixtureSection -->
+  <!-- BEGIN: StandingsSection -->
+  <section aria-label="Tabla de Posiciones" class="py-16 sm:py-20 bg-brand-darkSurface/40 border-b border-gray-800/60" id="posiciones">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Estadísticas Oficiales</span>
+        <h2 class="font-sport font-black text-3xl sm:text-4xl text-white mt-1 uppercase"> TABLA GENERAL DE POSICIONES </h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+        <p class="text-gray-400 text-sm mt-3"> Clasifican a la ronda final de Playoffs los <span class="text-brand-gold font-bold">4 mejores lugares</span> al cabo de 8 fechas. </p>
+      </div>
+      <!-- Responsive Table Card -->
+      <div class="bg-brand-darkSurface border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm whitespace-nowrap">
+            <!-- Table Header -->
+            <thead class="bg-gray-900/90 text-gray-400 font-sport uppercase tracking-wider text-xs border-b border-gray-800">
+              <tr>
+                <th class="py-4 px-4 text-center w-14" scope="col">Pos</th>
+                <th class="py-4 px-6" scope="col">Equipo</th>
+                <th class="py-4 px-4 text-center" scope="col">PJ</th>
+                <th class="py-4 px-4 text-center" scope="col">PG</th>
+                <th class="py-4 px-4 text-center" scope="col">PP</th>
+                <th class="py-4 px-4 text-center" scope="col">PF</th>
+                <th class="py-4 px-4 text-center" scope="col">PC</th>
+                <th class="py-4 px-4 text-center" scope="col">DIF</th>
+                <th class="py-4 px-6 text-center font-black text-brand-gold" scope="col">PTS</th>
+              </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody class="divide-y divide-gray-800/60 font-sans">
+              <!-- Pos 1 (Playoffs) -->
+              <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
+                <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">1</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-blue-950 border border-blue-500/40 flex items-center justify-center font-sport text-xs text-blue-300">TC</div>
+                  <span class="">Titanes Cañete</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">5</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">1</td>
+                <td class="py-4 px-4 text-center font-mono">482</td>
+                <td class="py-4 px-4 text-center font-mono">410</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+72</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
+              </tr>
+              <!-- Pos 2 (Playoffs) -->
+              <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
+                <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">2</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-amber-950 border border-amber-500/40 flex items-center justify-center font-sport text-xs text-amber-300">HV</div>
+                  <span class="">Halcones del Valle</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">5</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">1</td>
+                <td class="py-4 px-4 text-center font-mono">465</td>
+                <td class="py-4 px-4 text-center font-mono">420</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+45</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
+              </tr>
+              <!-- Pos 3 (Playoffs) -->
+              <tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
+                <td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">3</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-purple-950 border border-purple-500/40 flex items-center justify-center font-sport text-xs text-purple-300">BM</div>
+                  <span class="">Black Mambas</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">4</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">2</td>
+                <td class="py-4 px-4 text-center font-mono">450</td>
+                <td class="py-4 px-4 text-center font-mono">430</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+20</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
+              </tr>
+              <!-- Pos 4 (Playoffs) -->
+              <tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
+                <td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">4</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-slate-800 border border-slate-500/40 flex items-center justify-center font-sport text-xs text-slate-300">LS</div>
+                  <span class="">Lobos del Sur</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">4</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">2</td>
+                <td class="py-4 px-4 text-center font-mono">432</td>
+                <td class="py-4 px-4 text-center font-mono">415</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+17</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
+              </tr>
+              <!-- Pos 5 -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">5</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-yellow-950 border border-yellow-500/40 flex items-center justify-center font-sport text-xs text-yellow-300">WI</div>
+                  <span class="">Warriors Imperial</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400">3</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">3</td>
+                <td class="py-4 px-4 text-center font-mono">418</td>
+                <td class="py-4 px-4 text-center font-mono">422</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-4</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">9</td>
+              </tr>
+              <!-- Pos 6 -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">6</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-orange-950 border border-orange-500/40 flex items-center justify-center font-sport text-xs text-orange-300">FB</div>
+                  <span class="">Fénix Basket</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400">2</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">4</td>
+                <td class="py-4 px-4 text-center font-mono">405</td>
+                <td class="py-4 px-4 text-center font-mono">440</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-35</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">8</td>
+              </tr>
+              <!-- Pos 7 -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">7</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-red-950 border border-red-500/40 flex items-center justify-center font-sport text-xs text-red-300">GL</div>
+                  <span class="">Gladiadores</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400">1</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">5</td>
+                <td class="py-4 px-4 text-center font-mono">390</td>
+                <td class="py-4 px-4 text-center font-mono">445</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-55</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
+              </tr>
+              <!-- Pos 8 -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">8</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-teal-950 border border-teal-500/40 flex items-center justify-center font-sport text-xs text-teal-300">AP</div>
+                  <span class="">Águilas del Puerto</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400">1</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">5</td>
+                <td class="py-4 px-4 text-center font-mono">380</td>
+                <td class="py-4 px-4 text-center font-mono">440</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-60</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-<!-- Sponsor 4 -->
-<div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
-<span class="text-green-500">🩺</span> KINESPORT FISIOTERAPIA
+        <div class="p-4 bg-gray-900/60 border-t border-gray-800 flex flex-wrap items-center justify-between text-xs text-gray-400 gap-3">
+          <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded bg-brand-gold inline-block"></span> Clasificación a Semifinales </span>
+            <span class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded bg-brand-accentBlue inline-block"></span> Repechaje Play-In </span>
+          </div>
+          <span class="">Actualizado al Sábado anterior tras el cierre de planilla</span>
         </div>
-<!-- Sponsor 5 -->
-<div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
-<span class="text-yellow-500">👕</span> BASKET PRO WEAR
+      </div>
+    </div>
+  </section>
+  <!-- END: StandingsSection -->
+  <!-- BEGIN: ResultsAndMVPSection -->
+  <section aria-label="Resultados y MVP" class="py-16 sm:py-20 bg-[#0B0F19] border-b border-gray-800/60" id="resultados">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col">
+          <div class="text-center mb-6"><span class="text-xs font-bold tracking-widest text-brand-gold uppercase">Marcadores Finales</span>
+            <h2 class="font-sport font-black text-2xl text-white mt-1 uppercase">RESUMEN DEL ÚLTIMO SÁBADO</h2>
+            <div class="w-12 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            <p class="text-xs text-gray-400 mt-2">Sede: Polideportivo Beto Di Laura</p>
+          </div>
+          <div class="space-y-3">
+            <div class="bg-brand-darkSurface border border-gray-800 rounded-2xl p-4 flex flex-col gap-2.5">
+              <div class="flex justify-between items-center text-xs text-gray-400"><span class="font-sport text-brand-gold font-bold">FECHA 4 • PARTIDO DESTACADO</span><span class="">Beto Di Laura</span></div>
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <div class="flex justify-between items-center mb-0.5"><span class="font-sport font-bold text-white text-sm">Titanes Cañete</span><span class="font-sport font-black text-lg text-brand-gold">88</span></div><span class="text-[11px] text-gray-400">M. Valenzuela (28 pts, 6 ast)</span>
+                </div>
+                <div class="px-3 text-xs font-black text-gray-600">VS</div>
+                <div class="flex-1 text-right">
+                  <div class="flex justify-between items-center mb-0.5 flex-row-reverse"><span class="font-sport font-bold text-white text-sm">Lobos del Sur</span><span class="font-sport font-black text-lg text-gray-400">82</span></div><span class="text-[11px] text-gray-400">R. Salazar (22 pts, 9 reb)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-brand-darkSurface border border-gray-800 rounded-2xl p-4 flex flex-col gap-2.5">
+              <div class="flex justify-between items-center text-xs text-gray-400"><span class="font-sport text-brand-gold font-bold">FECHA 4</span><span class="">Beto Di Laura</span></div>
+              <div class="flex items-center justify-between">
+                <div class="flex-1">
+                  <div class="flex justify-between items-center mb-0.5"><span class="font-sport font-bold text-white text-sm">Halcones del Valle</span><span class="font-sport font-black text-lg text-brand-gold">94</span></div><span class="text-[11px] text-gray-400">Carlos Mendoza (34 pts)</span>
+                </div>
+                <div class="px-3 text-xs font-black text-gray-600">VS</div>
+                <div class="flex-1 text-right">
+                  <div class="flex justify-between items-center mb-0.5 flex-row-reverse"><span class="font-sport font-bold text-white text-sm">Black Mambas</span><span class="font-sport font-black text-lg text-gray-400">89</span></div><span class="text-[11px] text-gray-400">E. Morales (31 pts)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-</div>
-</div>
-</section>
-<!-- END: SponsorsSection -->
-<!-- BEGIN: MainFooter -->
-<footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-<!-- Column 1: Info & Brand -->
-<div class="space-y-4">
-<div class="flex items-center gap-3">
-<img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOZ_EJyTP4V7Cl9LUK0wiQVeBC82vavKhNWsXaYDFs0JEKgaG2dlF2EAEgdM0zY4g3nK6Ss7FEtef4h9ZxajKwd9as_1ZCvO50wxWsQT8cukz6c21bMytfJHZ5cv2CeMCN45s_dFCrMaMHqiqg-wrnlTk7WpGQfGEc75ZUL4FAyKDIol9la6yVm_kLxTVr9eWnoZ26WJ4i-FFr_Fe6wzi0zotvG19JRjzlPVYu1eDExao1UfEdUptlOTVDLVl8Nxm6g">
-<span class="font-sport font-black text-lg text-white">LIGUILLA CAÑETE</span>
-</div>
-<p class="text-xs text-gray-400 leading-relaxed">
-            El torneo de baloncesto semiprofesional más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado.
-          </p>
-</div>
-<!-- Column 2: Quick Links -->
-<div>
-<h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Navegación</h4>
-<ul class="space-y-2 text-xs">
-<li class=""><a class="hover:text-brand-gold transition-colors" href="equipos.html">Equipos 2025</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="cronograma.html">Fixture y Horarios</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#posiciones">Tabla General</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#resultados">Resultados &amp; MVP</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#galeria">Galería de Partidos</a></li>
-</ul>
-</div>
-<!-- Column 3: Regulation & Official Info -->
-<div>
-<h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Torneo Oficial</h4>
-<ul class="space-y-2 text-xs">
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#">Reglamento FIBA Adaptado</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#">Tabla de Sanciones</a></li>
-<li class=""><a class="hover:text-brand-gold transition-colors" href="#">Inscripción para Temporada Clausura</a></li>
-</ul>
-</div>
-<!-- Column 4: Contact & Venue -->
-<div>
-<h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Contacto &amp; Cancha</h4>
-<p class="text-xs text-gray-400 mb-2">Sede Única: Polideportivo Beto Di Laura, Cañete, Región del Biobío.</p>
-<p class="text-xs text-gray-300 font-medium">contacto@liguillacanete.cl</p>
-<p class="text-xs text-gray-300 font-medium mt-1">+56 9 8765 4321</p>
-<!-- Social Icons -->
-<div class="flex items-center gap-3 mt-4">
-<a aria-label="Instagram" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a aria-label="Facebook" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"></path></svg>
-</a>
-<a aria-label="YouTube" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-<!-- Bottom Bar -->
-<div class="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-<p class="">© 2025 Liguilla de Básquetbol Cañete. Todos los derechos reservados.</p>
-<p class="">Pasión por el Baloncesto Local • Diseñado para Alta Competencia</p>
-</div>
-</div>
-</footer>
-<!-- END: MainFooter -->
+        <div class="w-full">
+          <div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
+            <div class="flex items-center justify-between mb-3"><span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">MVP DE LA FECHA 4</span><span aria-hidden="true" class="text-xl">👑</span></div>
+            <div>
+              <h3 class="font-sport font-black text-2xl text-white leading-tight">CARLOS MENDOZA</h3>
+              <p class="text-brand-gold font-semibold text-xs mt-0.5 uppercase tracking-wide">Halcones del Valle • Alero Titular #10</p>
+            </div>
+            <div class="my-4 py-4 border-y border-brand-gold/20 flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-gold to-amber-200 p-0.5 shadow-lg">
+                <div class="w-full h-full bg-brand-darkSurface rounded-2xl flex items-center justify-center font-sport font-black text-xl text-brand-gold">#10</div>
+              </div>
+              <p class="flex-1 text-xs text-gray-300 italic leading-snug">"Lideró la remontada encestando 14 puntos en el último cuarto en el Polideportivo Beto Di Laura."</p>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center bg-gray-950/70 p-3 rounded-xl border border-gray-800">
+              <div><span class="block font-sport font-black text-xl text-white">34</span><span class="text-[10px] uppercase font-bold text-gray-400">Puntos</span></div>
+              <div><span class="block font-sport font-black text-xl text-brand-gold">8</span><span class="text-[10px] uppercase font-bold text-gray-400">Rebotes</span></div>
+              <div><span class="block font-sport font-black text-xl text-white">6</span><span class="text-[10px] uppercase font-bold text-gray-400">Asist.</span></div>
+              <div><span class="block font-sport font-black text-xl text-brand-gold">4</span><span class="text-[10px] uppercase font-bold text-gray-400">Triples</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ResultsAndMVPSection -->
+  <!-- BEGIN: GallerySection -->
+  <!-- END: GallerySection -->
+  <!-- BEGIN: SponsorsSection -->
+  <section aria-label="Patrocinadores" class="py-12 bg-gray-950 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-xs font-sport font-bold tracking-widest text-gray-500 uppercase mb-8"> PATROCINADORES OFICIALES &amp; AUSPICIADORES </h3>
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+        <!-- Sponsor 1 -->
+        <div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
+          <span class="text-brand-gold">⚡</span> POWERENERGY DRINKS
+        </div>
+        <!-- Sponsor 2 -->
+        <div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
+          <span class="text-blue-500">🏀</span> CAÑETE SPORT STORE
+        </div>
+        <!-- Sponsor 3 -->
+        <div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
+          <span class="text-red-500">🏛️</span> COLISEO MUNICIPAL
+        </div>
+        <!-- Sponsor 4 -->
+        <div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
+          <span class="text-green-500">🩺</span> KINESPORT FISIOTERAPIA
+        </div>
+        <!-- Sponsor 5 -->
+        <div class="flex items-center gap-2 font-sport font-black text-lg text-gray-300 hover:text-brand-gold transition-colors">
+          <span class="text-yellow-500">👕</span> BASKET PRO WEAR
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: SponsorsSection -->
+  <!-- BEGIN: MainFooter -->
+  <footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Column 1: Info & Brand -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOZ_EJyTP4V7Cl9LUK0wiQVeBC82vavKhNWsXaYDFs0JEKgaG2dlF2EAEgdM0zY4g3nK6Ss7FEtef4h9ZxajKwd9as_1ZCvO50wxWsQT8cukz6c21bMytfJHZ5cv2CeMCN45s_dFCrMaMHqiqg-wrnlTk7WpGQfGEc75ZUL4FAyKDIol9la6yVm_kLxTVr9eWnoZ26WJ4i-FFr_Fe6wzi0zotvG19JRjzlPVYu1eDExao1UfEdUptlOTVDLVl8Nxm6g">
+            <span class="font-sport font-black text-lg text-white">LIGUILLA CAÑETE</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto semiprofesional más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>
+        </div>
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2 text-xs">
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="equipos.html">Equipos 2025</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="cronograma.html">Fixture y Horarios</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#posiciones">Tabla General</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#resultados">Resultados &amp; MVP</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#galeria">Galería de Partidos</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Regulation & Official Info -->
+        <div>
+          <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Torneo Oficial</h4>
+          <ul class="space-y-2 text-xs">
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Reglamento FIBA Adaptado</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Tabla de Sanciones</a></li>
+            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Inscripción para Temporada Clausura</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Contact & Venue -->
+        <div>
+          <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Contacto &amp; Cancha</h4>
+          <p class="text-xs text-gray-400 mb-2">Sede Única: Polideportivo Beto Di Laura, Cañete, Región del Biobío.</p>
+          <p class="text-xs text-gray-300 font-medium">contacto@liguillacanete.cl</p>
+          <p class="text-xs text-gray-300 font-medium mt-1">+56 9 8765 4321</p>
+          <!-- Social Icons -->
+          <div class="flex items-center gap-3 mt-4">
+            <a aria-label="Instagram" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+              </svg>
+            </a>
+            <a aria-label="Facebook" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"></path>
+              </svg>
+            </a>
+            <a aria-label="YouTube" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p class="">© 2025 Liguilla de Básquetbol Cañete. Todos los derechos reservados.</p>
+        <p class="">Pasión por el Baloncesto Local • Diseñado para Alta Competencia</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+  <script class="">
+    (function() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      const links = document.querySelectorAll('.mobile-nav-link');
 
+      function openMenu() {
+        drawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
 
-<script class="">(function(){const toggle=document.getElementById('mobile-menu-toggle');const drawer=document.getElementById('mobile-drawer');const closeBtn=document.getElementById('mobile-drawer-close');const backdrop=document.getElementById('mobile-drawer-backdrop');const links=document.querySelectorAll('.mobile-nav-link');function openMenu(){drawer.classList.remove('hidden');document.body.style.overflow='hidden';}function closeMenu(){drawer.classList.add('hidden');document.body.style.overflow='';}if(toggle){toggle.addEventListener('click',openMenu);}if(closeBtn){closeBtn.addEventListener('click',closeMenu);}if(backdrop){backdrop.addEventListener('click',closeMenu);}links.forEach(link=>{link.addEventListener('click',closeMenu);});})();</script>
+      function closeMenu() {
+        drawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+      if (toggle) {
+        toggle.addEventListener('click', openMenu);
+      }
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+      if (backdrop) {
+        backdrop.addEventListener('click', closeMenu);
+      }
+      links.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+</body>
 
-
-
-
-
-</body></html>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="es" style="">
+<html class="dark" lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -7,8 +7,8 @@
   <title>Equipos Participantes - Liguilla de Básquetbol Cañete</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -16,6 +16,17 @@
       theme: {
         extend: {
           colors: {
+            brand: {
+              gold: '#E5B842',
+              goldLight: '#F59E0B',
+              goldDark: '#B8860B',
+              darkBg: '#0B0F19',
+              darkSurface: '#111827',
+              darkCard: '#161F30',
+              accentBlue: '#2563EB',
+              accentOrange: '#EA580C',
+              accentRed: '#DC2626'
+            },
             'primary-fixed': '#F5D98B',
             'outline-variant': '#374151',
             'on-primary-fixed-variant': '#5A4400',
@@ -96,71 +107,23 @@
             'headline-md': ['Montserrat'],
             'body-md': ['Inter'],
             'display-hero': ['Montserrat'],
-            'headline-lg-mobile': ['Montserrat']
+            'headline-lg-mobile': ['Montserrat'],
+            'sport': ['Montserrat', 'Impact', 'sans-serif']
           },
           fontSize: {
-            'headline-sm': ['18px', {
-              lineHeight: '24px',
-              letterSpacing: '0.02em',
-              fontWeight: '600'
-            }],
-            'stat-counter': ['24px', {
-              lineHeight: '28px',
-              letterSpacing: '-0.01em',
-              fontWeight: '700'
-            }],
-            'body-lg': ['16px', {
-              lineHeight: '24px',
-              fontWeight: '400'
-            }],
-            'stat-display': ['44px', {
-              lineHeight: '48px',
-              letterSpacing: '-0.02em',
-              fontWeight: '700'
-            }],
-            'display-hero-mobile': ['36px', {
-              lineHeight: '42px',
-              letterSpacing: '0.03em',
-              fontWeight: '700'
-            }],
-            'label-xs': ['10px', {
-              lineHeight: '14px',
-              letterSpacing: '0.1em',
-              fontWeight: '700'
-            }],
-            'label-md': ['12px', {
-              lineHeight: '16px',
-              letterSpacing: '0.08em',
-              fontWeight: '600'
-            }],
-            'headline-lg': ['32px', {
-              lineHeight: '38px',
-              letterSpacing: '0.03em',
-              fontWeight: '700'
-            }],
-            'body-sm': ['12px', {
-              lineHeight: '18px',
-              fontWeight: '400'
-            }],
-            'headline-md': ['22px', {
-              lineHeight: '28px',
-              letterSpacing: '0.02em',
-              fontWeight: '600'
-            }],
-            'body-md': ['14px', {
-              lineHeight: '20px',
-              fontWeight: '400'
-            }],
-            'display-hero': ['56px', {
-              lineHeight: '64px',
-              letterSpacing: '0.04em',
-              fontWeight: '700'
-            }],
-            'headline-lg-mobile': ['26px', {
-              lineHeight: '32px',
-              letterSpacing: '0.02em',
-              fontWeight: '700'
-            }]
+            'headline-sm': ['18px', { lineHeight: '24px', letterSpacing: '0.02em', fontWeight: '600' }],
+            'stat-counter': ['24px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '700' }],
+            'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+            'stat-display': ['44px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'display-hero-mobile': ['36px', { lineHeight: '42px', letterSpacing: '0.03em', fontWeight: '700' }],
+            'label-xs': ['10px', { lineHeight: '14px', letterSpacing: '0.1em', fontWeight: '700' }],
+            'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.08em', fontWeight: '600' }],
+            'headline-lg': ['32px', { lineHeight: '38px', letterSpacing: '0.03em', fontWeight: '700' }],
+            'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+            'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '0.02em', fontWeight: '600' }],
+            'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+            'display-hero': ['56px', { lineHeight: '64px', letterSpacing: '0.04em', fontWeight: '700' }],
+            'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0.02em', fontWeight: '700' }]
           }
         }
       }
@@ -168,45 +131,35 @@
   </script>
   <style>
     @layer base {
-
-      html,
-      body {
+      html, body {
         width: 100vw;
         margin: 0;
         padding: 0;
         background-color: #0B0F19;
         color: #F3F4F6;
       }
-
       body {
         overscroll-behavior: none;
       }
-
       .pb-safe {
         padding-bottom: env(safe-area-inset-bottom, 0px);
       }
-
       .pt-safe {
         padding-top: env(safe-area-inset-top, 0px);
       }
-
       main>:first-child {
         margin-top: 0 !important;
       }
-
       main>:last-child {
         margin-bottom: 0 !important;
       }
     }
-
     ::-webkit-scrollbar {
       display: none;
     }
-
     #drawer-toggle:checked~#mobile-drawer {
       transform: translateX(0);
     }
-
     #drawer-toggle:checked~#drawer-backdrop {
       display: block;
     }
@@ -216,11 +169,13 @@
 <body class="bg-surface font-body-md text-body-md flex flex-col min-h-screen">
   <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand & Official Logo -->
-      <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="index.html"><img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072gen3gEq7kX_nMgArhrW6VGHZ1ppVTgfKF15QKRA4Q3dJJHaJslkiOEKlLH765MnLQVoxfutb__-LvTrV86VMPjgaiyYstSuRFnTjZorDWcjBFnuocV4403alWz-xIzTVg1rY5Ys1V4aulI6G7qSAupIyBN3-B9-50_5hDybRVIsrW8JXTf5juOpMJY48da_IviuB0DpVqMP_9FCYj0eSQqC6c5AQxqqkPWL9LIaEQUocTF1ba_Q-1LEkU9wWjcpw">
-        <div class="flex flex-col"><span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">LIGUILLA CAÑETE</span><span class="text-[10px] font-semibold tracking-widest text-brand-gold uppercase mt-0.5">Básquetbol de Primera</span></div>
+      <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+        <img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072gen3gEq7kX_nMgArhrW6VGHZ1ppVTgfKF15QKRA4Q3dJJHaJslkiOEKlLH765MnLQVoxfutb__-LvTrV86VMPjgaiyYstSuRFnTjZorDWcjBFnuocV4403alWz-xIzTVg1rY5Ys1V4aulI6G7qSAupIyBN3-B9-50_5hDybRVIsrW8JXTf5juOpMJY48da_IviuB0DpVqMP_9FCYj0eSQqC6c5AQxqqkPWL9LIaEQUocTF1ba_Q-1LEkU9wWjcpw">
+        <div class="flex flex-col">
+          <span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">LIGUILLA CAÑETE</span>
+          <span class="text-[10px] font-semibold tracking-widest text-brand-gold uppercase mt-0.5">Básquetbol de Primera</span>
+        </div>
       </a>
-      <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
         <a class="text-brand-gold font-bold transition-colors py-1" href="equipos.html">Equipos</a>
         <a class="hover:text-brand-gold transition-colors py-1" href="cronograma.html">Fixture</a>
@@ -228,46 +183,72 @@
         <a class="hover:text-brand-gold transition-colors py-1" href="index.html#resultados">Resultados &amp; MVP</a>
         <a class="hover:text-brand-gold transition-colors py-1" href="index.html#galeria">Galería</a>
       </nav>
-      <!-- Action Area & Live Indicator -->
-      <div class="flex items-center gap-3 sm:gap-4"><a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="index.html#posiciones">POSICIONES</a><button id="mobile-menu-toggle" aria-label="Abrir menú de navegación" class="p-2 rounded-lg bg-gray-900/80 border border-gray-800 text-gray-300 hover:text-brand-gold hover:border-brand-gold/60 focus:outline-none focus:border-brand-gold transition-all active:scale-95"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-sport font-bold tracking-wide rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldLight text-black shadow-lg shadow-brand-gold/20 hover:brightness-110 active:scale-95 transition-all" href="index.html#posiciones">POSICIONES</a>
+        <button id="mobile-menu-toggle" aria-label="Abrir menú de navegación" class="p-2 rounded-lg bg-gray-900/80 border border-gray-800 text-gray-300 hover:text-brand-gold hover:border-brand-gold/60 focus:outline-none focus:border-brand-gold transition-all active:scale-95">
+          <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg></button></div>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
+
   <div id="mobile-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300">
     <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
     <div class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424] border-l border-brand-gold/30 shadow-2xl flex flex-col p-6 z-10">
       <div class="flex items-center justify-between pb-4 border-b border-gray-800">
-        <div class="flex items-center gap-2"><span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span></div><button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900 transition-colors"><svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+        <div class="flex items-center gap-2"><span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span></div>
+        <button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900 transition-colors">
+          <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-          </svg></button>
+          </svg>
+        </button>
       </div>
-      <nav class="mt-6 flex flex-col gap-3"><a href="cronograma.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <nav class="mt-6 flex flex-col gap-3">
+        <a href="index.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm">
+          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>Inicio
+        </a>
+        <a href="cronograma.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm">
+          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>Cronograma de Juegos</a><a href="equipos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          </svg>Cronograma de Juegos
+        </a>
+        <a href="equipos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/90 border border-brand-gold/60 text-brand-gold transition-all font-sport font-semibold text-sm">
+          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>Equipos Participantes</a></nav>
-      <div class="mt-auto pt-6 border-t border-gray-800 text-xs text-gray-500 text-center"><span class="text-brand-gold font-bold">Liguilla Cañete 2026</span>
+          </svg>Equipos Participantes
+        </a>
+      </nav>
+      <div class="mt-auto pt-6 border-t border-gray-800 text-xs text-gray-500 text-center">
+        <span class="text-brand-gold font-bold">Liguilla Cañete 2026</span>
         <p class="mt-1 text-[11px]">Polideportivo Beto Di Laura</p>
       </div>
     </div>
   </div>
-  <main class="flex flex-col relative w-full pt-16 bg-surface flex-grow">
+
+  <main class="flex flex-col relative w-full bg-surface pb-8">
     <div class="flex flex-col w-full">
-      <!-- Top Visual Banner & Context -->
-      <div class="relative w-full px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-xs overflow-hidden">
+      <div class="relative w-full px-gutter-mobile pt-4 pb-space-lg flex flex-col gap-space-xs overflow-hidden">
         <div class="flex items-center gap-space-xs">
           <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-xs text-label-xs tracking-wider uppercase">
-            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Temporada Regular 2026</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Temporada Regular 2026
+          </span>
           <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-xs text-label-xs uppercase">
-            <span class="material-symbols-outlined text-[12px]">stadium</span> Beto Di Laura </span>
+            <span class="material-symbols-outlined text-[12px]">stadium</span> Beto Di Laura
+          </span>
         </div>
         <div class="flex flex-col">
-          <h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface tracking-wide"> Equipos <span class="text-primary">Participantes</span>
+          <h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface tracking-wide">
+            Equipos <span class="text-primary">Participantes</span>
           </h1>
-          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-0.5"> 8 escuadras provinciales batallando por la gloria máxima en el mítico tabloncillo de San Vicente de Cañete. </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-0.5">
+            8 escuadras provinciales batallando por la gloria máxima en el mítico tabloncillo de San Vicente de Cañete.
+          </p>
         </div>
-        <!-- Quick Stats Bar -->
+
         <div class="grid grid-cols-3 gap-space-xs mt-space-sm">
           <div class="flex flex-col p-space-xs rounded-xl bg-surface-container-low shadow-sm">
             <span class="font-label-xs text-label-xs uppercase text-on-surface-variant/80">Clubes</span>
@@ -286,9 +267,8 @@
           </div>
         </div>
       </div>
-      <!-- Search and Interactive Filtering Section -->
+
       <div class="px-gutter-mobile mb-space-md flex flex-col gap-space-xs">
-        <!-- Search Bar -->
         <div class="relative w-full">
           <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
             <span class="material-symbols-outlined text-[20px]">search</span>
@@ -298,24 +278,26 @@
             <span class="material-symbols-outlined text-[18px]">cancel</span>
           </button>
         </div>
-        <!-- Quick Pill Filters -->
+
         <div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar text-nowrap">
           <button class="filter-pill active-pill px-3.5 py-1.5 rounded-full font-label-md text-label-md uppercase bg-primary text-on-primary shadow-sm flex items-center gap-1 transition-all" data-filter="all">
-            <span class="material-symbols-outlined text-[14px]">format_list_bulleted</span> Todos (8) </button>
+            <span class="material-symbols-outlined text-[14px]">format_list_bulleted</span> Todos (8)
+          </button>
           <button class="filter-pill px-3.5 py-1.5 rounded-full font-label-md text-label-md uppercase bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-all" data-filter="playoffs">
-            <span class="material-symbols-outlined text-[14px]">military_tech</span> Zona Clasificados </button>
+            <span class="material-symbols-outlined text-[14px]">military_tech</span> Zona Clasificados
+          </button>
           <button class="filter-pill px-3.5 py-1.5 rounded-full font-label-md text-label-md uppercase bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-all" data-filter="streak">
-            <span class="material-symbols-outlined text-[14px]">local_fire_department</span> Racha Activa </button>
+            <span class="material-symbols-outlined text-[14px]">local_fire_department</span> Racha Activa
+          </button>
         </div>
       </div>
-      <!-- Team List Grid (Mobile-Optimized Single Column) -->
+
       <div class="px-gutter-mobile flex flex-col gap-space-md" id="teamsContainer">
-        <!-- Team 1: Titanes Cañete -->
+        <!-- Titanes Cañete -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="true" data-streak="win" data-team="titanes cañete tc valenzuela">
           <div class="absolute top-0 right-0 w-28 h-28 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Blue Identity -->
               <div class="w-13 h-13 rounded-xl bg-secondary-container text-on-secondary flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">TC</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">shield</span>
@@ -329,22 +311,19 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Titanes Cañete</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: M. Valenzuela</span>
+                  <span>Cap: M. Valenzuela</span>
                 </div>
               </div>
             </div>
-            <!-- Standing Record Block -->
             <div class="flex flex-col items-end flex-shrink-0 bg-surface-container px-2.5 py-1.5 rounded-lg shadow-sm">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant">Récord</span>
               <span class="font-stat-counter text-stat-counter text-primary leading-none">5 - 1</span>
               <span class="font-label-xs text-label-xs text-on-surface-variant">.833 PCT</span>
             </div>
           </div>
-          <!-- Stats Bar & Streak -->
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5 Badges: V, V, V, D, V -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
@@ -353,23 +332,21 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">12 Jugadores</span>
+              <span>12 Jugadores</span>
             </div>
           </div>
-          <!-- Interactive Action Tray -->
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-tc')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-primary-container/20 text-primary hover:bg-primary-container/30 flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
             </button>
           </div>
-          <!-- Collapsible Drawer for Team Details -->
           <div class="hidden flex flex-col gap-space-xs pt-space-xs border-t-0 bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-tc">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Quinteto Titular Habitual</span>
+              <span>Quinteto Titular Habitual</span>
               <span class="text-primary font-bold">PTS Prom: 78.4</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -379,17 +356,17 @@
               <span class="truncate">#23 D. Palma (AP)</span>
             </div>
             <div class="flex justify-between items-center pt-1 text-on-surface-variant font-label-xs text-label-xs">
-              <span class="">DT: Roberto Sánchez</span>
+              <span>DT: Roberto Sánchez</span>
               <span class="text-secondary">Próximo: vs Halcones</span>
             </div>
           </div>
         </div>
-        <!-- Team 2: Halcones del Valle -->
+
+        <!-- Halcones del Valle -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="true" data-streak="win" data-team="halcones del valle hv mendoza">
           <div class="absolute top-0 right-0 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Gold / Orange Identity -->
               <div class="w-13 h-13 rounded-xl bg-primary-container text-on-primary-container flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">HV</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">military_tech</span>
@@ -403,22 +380,19 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Halcones del Valle</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: Carlos Mendoza</span>
+                  <span>Cap: Carlos Mendoza</span>
                 </div>
               </div>
             </div>
-            <!-- Standing Record Block -->
             <div class="flex flex-col items-end flex-shrink-0 bg-surface-container px-2.5 py-1.5 rounded-lg shadow-sm">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant">Récord</span>
               <span class="font-stat-counter text-stat-counter text-primary leading-none">5 - 1</span>
               <span class="font-label-xs text-label-xs text-on-surface-variant">.833 PCT</span>
             </div>
           </div>
-          <!-- Stats Bar & Streak -->
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: V, V, V, V, D -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
@@ -427,14 +401,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">12 Jugadores</span>
+              <span>12 Jugadores</span>
             </div>
           </div>
-          <!-- Actions -->
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-hv')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-primary-container/20 text-primary hover:bg-primary-container/30 flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -442,7 +415,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-hv">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Líderes de Escuadra</span>
+              <span>Líderes de Escuadra</span>
               <span class="text-primary font-bold">Defensiva #1</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -452,16 +425,16 @@
               <span class="truncate">#32 S. Navarro (AP)</span>
             </div>
             <div class="flex justify-between items-center pt-1 text-on-surface-variant font-label-xs text-label-xs">
-              <span class="">DT: Andrés Loyola</span>
+              <span>DT: Andrés Loyola</span>
               <span class="text-secondary">Próximo: vs Titanes</span>
             </div>
           </div>
         </div>
-        <!-- Team 3: Lobos del Sur -->
+
+        <!-- Lobos del Sur -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="true" data-streak="win" data-team="lobos del sur ls salazar">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Navy identity -->
               <div class="w-13 h-13 rounded-xl bg-surface-container-highest text-secondary-fixed flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">LS</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">pets</span>
@@ -475,7 +448,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Lobos del Sur</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: R. Salazar</span>
+                  <span>Cap: R. Salazar</span>
                 </div>
               </div>
             </div>
@@ -488,7 +461,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: D, V, V, D, V -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
@@ -497,13 +469,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">11 Jugadores</span>
+              <span>11 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-ls')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -511,7 +483,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-ls">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Destacados</span>
+              <span>Destacados</span>
               <span class="text-primary font-bold">Rebotes: #1 Liga</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -522,11 +494,11 @@
             </div>
           </div>
         </div>
-        <!-- Team 4: Black Mambas -->
+
+        <!-- Black Mambas -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="true" data-streak="loss" data-team="black mambas bm morales">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Deep Purple Identity -->
               <div class="w-13 h-13 rounded-xl bg-surface-bright text-primary flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">BM</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">bolt</span>
@@ -540,7 +512,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Black Mambas</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: E. Morales</span>
+                  <span>Cap: E. Morales</span>
                 </div>
               </div>
             </div>
@@ -553,7 +525,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: V, V, D, V, D -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
@@ -562,13 +533,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">12 Jugadores</span>
+              <span>12 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-bm')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -576,7 +547,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-bm">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Plantilla Activa</span>
+              <span>Plantilla Activa</span>
               <span class="text-primary font-bold">Tiros Libres 81%</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -587,11 +558,11 @@
             </div>
           </div>
         </div>
-        <!-- Team 5: Warriors Imperial -->
+
+        <!-- Warriors Imperial -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="false" data-streak="win" data-team="warriors imperial wi castro">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Yellow / Black Identity -->
               <div class="w-13 h-13 rounded-xl bg-primary text-on-primary flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">WI</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">swords</span>
@@ -605,7 +576,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Warriors Imperial</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: F. Castro</span>
+                  <span>Cap: F. Castro</span>
                 </div>
               </div>
             </div>
@@ -618,7 +589,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: D, V, D, V, V -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
@@ -627,13 +597,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">10 Jugadores</span>
+              <span>10 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-wi')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -641,7 +611,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-wi">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Plantilla Imperial</span>
+              <span>Plantilla Imperial</span>
               <span class="text-primary font-bold">Lider Triples: Castro</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -652,11 +622,11 @@
             </div>
           </div>
         </div>
-        <!-- Team 6: Fénix Basket -->
+
+        <!-- Fénix Basket -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="false" data-streak="loss" data-team="fénix basket fenix fb paredes">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Fire Red Identity -->
               <div class="w-13 h-13 rounded-xl bg-tertiary-container text-on-tertiary-container flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">FB</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">local_fire_department</span>
@@ -670,7 +640,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Fénix Basket</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: J. Paredes</span>
+                  <span>Cap: J. Paredes</span>
                 </div>
               </div>
             </div>
@@ -683,7 +653,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: D, D, V, D, D -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-primary-container text-on-primary-container">V</span>
@@ -692,13 +661,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">12 Jugadores</span>
+              <span>12 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-fb')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -706,7 +675,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-fb">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Plantilla Fénix</span>
+              <span>Plantilla Fénix</span>
               <span class="text-primary font-bold">Recuperaciones: 14.2</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -717,11 +686,11 @@
             </div>
           </div>
         </div>
-        <!-- Team 7: Gladiadores -->
+
+        <!-- Gladiadores -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="false" data-streak="loss" data-team="gladiadores gl muñoz munoz">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Garnet Identity -->
               <div class="w-13 h-13 rounded-xl bg-error-container text-on-error-container flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">GL</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">security</span>
@@ -735,7 +704,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Gladiadores</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: D. Muñoz</span>
+                  <span>Cap: D. Muñoz</span>
                 </div>
               </div>
             </div>
@@ -748,7 +717,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: D, D, D, V, D -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
@@ -757,13 +725,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">11 Jugadores</span>
+              <span>11 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-gl')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -771,7 +739,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-gl">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Escuadra Gladiadores</span>
+              <span>Escuadra Gladiadores</span>
               <span class="text-primary font-bold">Faltas Com: 16.0</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -782,11 +750,11 @@
             </div>
           </div>
         </div>
-        <!-- Team 8: Águilas del Puerto -->
+
+        <!-- Águilas del Puerto -->
         <div class="team-card relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm" data-playoff="false" data-streak="loss" data-team="águilas del puerto aguilas ap soto">
           <div class="flex items-start justify-between gap-space-sm relative z-10">
             <div class="flex items-center gap-space-sm min-w-0">
-              <!-- Crest / Badge with Emerald Identity -->
               <div class="w-13 h-13 rounded-xl bg-surface-container-high text-primary-fixed flex flex-col items-center justify-center font-headline-sm text-headline-sm shadow-md flex-shrink-0 p-1">
                 <span class="tracking-tighter font-headline-sm">AP</span>
                 <span class="material-symbols-outlined text-[12px] opacity-80 -mt-1">flight</span>
@@ -800,7 +768,7 @@
                 <h2 class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Águilas del Puerto</h2>
                 <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm truncate">
                   <span class="material-symbols-outlined text-[14px]">person</span>
-                  <span class="">Cap: A. Soto</span>
+                  <span>Cap: A. Soto</span>
                 </div>
               </div>
             </div>
@@ -813,7 +781,6 @@
           <div class="flex items-center justify-between pt-space-xs bg-surface-container/40 p-space-xs rounded-lg">
             <div class="flex items-center gap-1">
               <span class="font-label-xs text-label-xs uppercase text-on-surface-variant mr-1">Racha:</span>
-              <!-- Last 5: D, D, D, D, V -->
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
               <span class="w-5 h-5 rounded flex items-center justify-center font-label-xs text-label-xs font-bold bg-surface-variant text-on-surface-variant">D</span>
@@ -822,13 +789,13 @@
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
               <span class="material-symbols-outlined text-[14px]">groups</span>
-              <span class="">12 Jugadores</span>
+              <span>12 Jugadores</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs pt-0.5">
             <button class="flex-1 h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center gap-1.5 font-label-md text-label-md uppercase transition-colors" onclick="toggleRoster('roster-ap')">
               <span class="material-symbols-outlined text-[16px]">badge</span>
-              <span class="">Ver Plantilla</span>
+              <span>Ver Plantilla</span>
             </button>
             <button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright flex items-center justify-center font-label-md text-label-md uppercase transition-colors">
               <span class="material-symbols-outlined text-[18px]">query_stats</span>
@@ -836,7 +803,7 @@
           </div>
           <div class="hidden flex flex-col gap-space-xs pt-space-xs bg-surface-container-lowest/50 p-space-xs rounded-lg" id="roster-ap">
             <div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs uppercase">
-              <span class="">Plantilla Águilas</span>
+              <span>Plantilla Águilas</span>
               <span class="text-primary font-bold">Pase Rápido</span>
             </div>
             <div class="grid grid-cols-2 gap-1 text-on-surface font-body-sm text-body-sm">
@@ -848,7 +815,7 @@
           </div>
         </div>
       </div>
-      <!-- Empty State (Hidden by default, shown if filter has no results) -->
+
       <div class="hidden px-gutter-mobile py-space-xl flex-col items-center justify-center text-center gap-space-xs" id="noTeamsMessage">
         <div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
           <span class="material-symbols-outlined text-[28px]">sports_basketball</span>
@@ -857,10 +824,9 @@
         <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs"> Intenta con otro término de búsqueda o restablece los filtros para ver las 8 escuadras. </p>
         <button class="mt-space-xs px-4 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md uppercase" onclick="resetFilters()"> Restablecer Filtros </button>
       </div>
-      <!-- Venue & Fair Play Showcase Card -->
+
       <div class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
         <div class="relative rounded-2xl bg-surface-container-low p-space-md shadow-lg overflow-hidden">
-          <!-- Background Ambient Glow -->
           <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
           <div class="flex flex-col gap-space-xs relative z-10">
             <div class="flex items-center justify-between">
@@ -875,7 +841,6 @@
               </div>
             </div>
             <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-1"> Ubicado en el corazón de San Vicente de Cañete, dotado de piso de parquet flotante de alta competencia y tablero electrónico reglamentario. Entrada libre con aforo controlado. </p>
-            <!-- Small Fair Play Bento Badge -->
             <div class="grid grid-cols-2 gap-space-xs mt-space-xs">
               <div class="p-space-xs rounded-xl bg-surface-container flex items-center gap-space-xs">
                 <span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
@@ -892,107 +857,19 @@
                 </div>
               </div>
             </div>
-            <!-- Action / CTA to Fixture -->
             <a class="mt-space-xs h-11 w-full rounded-xl bg-surface-container hover:bg-surface-bright flex items-center justify-center gap-2 text-primary font-label-md text-label-md uppercase transition-colors" data-path="cronograma-de-juegos" href="cronograma.html">
-              <span class="">Ver Calendario de Enfrentamientos</span>
+              <span>Ver Calendario de Enfrentamientos</span>
               <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
           </div>
         </div>
       </div>
-      <script>
-        // Accordion Toggle for Rosters
-        function toggleRoster(id) {
-          const roster = document.getElementById(id);
-          if (roster) {
-            roster.classList.toggle('hidden');
-          }
-        }
-        // Client-side Search and Filtering
-        const searchInput = document.getElementById('teamSearchInput');
-        const clearBtn = document.getElementById('clearSearchBtn');
-        const filterPills = document.querySelectorAll('.filter-pill');
-        const teamCards = document.querySelectorAll('.team-card');
-        const noTeamsMsg = document.getElementById('noTeamsMessage');
-        let currentFilter = 'all';
-
-        function filterTeams() {
-          const query = (searchInput.value || '').trim().toLowerCase();
-          let visibleCount = 0;
-          if (query.length > 0) {
-            clearBtn.classList.remove('hidden');
-          } else {
-            clearBtn.classList.add('hidden');
-          }
-          teamCards.forEach(card => {
-            const teamData = card.getAttribute('data-team') || '';
-            const streak = card.getAttribute('data-streak') || '';
-            const isPlayoff = card.getAttribute('data-playoff') === 'true';
-            const matchesQuery = teamData.includes(query);
-            let matchesPill = true;
-            if (currentFilter === 'playoffs') {
-              matchesPill = isPlayoff;
-            } else if (currentFilter === 'streak') {
-              matchesPill = streak === 'win';
-            }
-            if (matchesQuery && matchesPill) {
-              card.classList.remove('hidden');
-              visibleCount++;
-            } else {
-              card.classList.add('hidden');
-            }
-          });
-          if (visibleCount === 0) {
-            noTeamsMsg.classList.remove('hidden');
-            noTeamsMsg.classList.add('flex');
-          } else {
-            noTeamsMsg.classList.add('hidden');
-            noTeamsMsg.classList.remove('flex');
-          }
-        }
-        if (searchInput) {
-          searchInput.addEventListener('input', filterTeams);
-        }
-        if (clearBtn) {
-          clearBtn.addEventListener('click', () => {
-            searchInput.value = '';
-            filterTeams();
-          });
-        }
-        filterPills.forEach(pill => {
-          pill.addEventListener('click', () => {
-            filterPills.forEach(p => {
-              p.classList.remove('active-pill', 'bg-primary', 'text-on-primary');
-              p.classList.add('bg-surface-container', 'text-on-surface-variant');
-            });
-            pill.classList.add('active-pill', 'bg-primary', 'text-on-primary');
-            pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
-            currentFilter = pill.getAttribute('data-filter') || 'all';
-            filterTeams();
-          });
-        });
-
-        function resetFilters() {
-          if (searchInput) searchInput.value = '';
-          currentFilter = 'all';
-          filterPills.forEach((p, index) => {
-            if (index === 0) {
-              p.classList.add('active-pill', 'bg-primary', 'text-on-primary');
-              p.classList.remove('bg-surface-container', 'text-on-surface-variant');
-            } else {
-              p.classList.remove('active-pill', 'bg-primary', 'text-on-primary');
-              p.classList.add('bg-surface-container', 'text-on-surface-variant');
-            }
-          });
-          filterTeams();
-        }
-      </script>
     </div>
   </main>
+
   <footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <!-- Column 1: Info & Brand -->
         <div class="space-y-4">
           <div class="flex items-center gap-3">
             <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOZ_EJyTP4V7Cl9LUK0wiQVeBC82vavKhNWsXaYDFs0JEKgaG2dlF2EAEgdM0zY4g3nK6Ss7FEtef4h9ZxajKwd9as_1ZCvO50wxWsQT8cukz6c21bMytfJHZ5cv2CeMCN45s_dFCrMaMHqiqg-wrnlTk7WpGQfGEc75ZUL4FAyKDIol9la6yVm_kLxTVr9eWnoZ26WJ4i-FFr_Fe6wzi0zotvG19JRjzlPVYu1eDExao1UfEdUptlOTVDLVl8Nxm6g">
@@ -1000,60 +877,130 @@
           </div>
           <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto semiprofesional más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>
         </div>
-        <!-- Column 2: Quick Links -->
         <div>
           <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Navegación</h4>
           <ul class="space-y-2 text-xs">
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="equipos.html">Equipos 2025</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="cronograma.html">Fixture y Horarios</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="index.html#posiciones">Tabla General</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="index.html#resultados">Resultados &amp; MVP</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="index.html#galeria">Galería de Partidos</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="equipos.html">Equipos 2025</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="cronograma.html">Fixture y Horarios</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="index.html#posiciones">Tabla General</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="index.html#resultados">Resultados &amp; MVP</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="index.html#galeria">Galería de Partidos</a></li>
           </ul>
         </div>
-        <!-- Column 3: Regulation & Official Info -->
         <div>
           <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Torneo Oficial</h4>
           <ul class="space-y-2 text-xs">
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Reglamento FIBA Adaptado</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Tabla de Sanciones</a></li>
-            <li class=""><a class="hover:text-brand-gold transition-colors" href="#">Inscripción para Temporada Clausura</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="#">Reglamento FIBA Adaptado</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="#">Tabla de Sanciones</a></li>
+            <li><a class="hover:text-brand-gold transition-colors" href="#">Inscripción para Temporada Clausura</a></li>
           </ul>
         </div>
-        <!-- Column 4: Contact & Venue -->
         <div>
           <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Contacto &amp; Cancha</h4>
           <p class="text-xs text-gray-400 mb-2">Sede Única: Polideportivo Beto Di Laura, Cañete, Región del Biobío.</p>
           <p class="text-xs text-gray-300 font-medium">contacto@liguillacanete.cl</p>
           <p class="text-xs text-gray-300 font-medium mt-1">+56 9 8765 4321</p>
-          <!-- Social Icons -->
           <div class="flex items-center gap-3 mt-4">
             <a aria-label="Instagram" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
             </a>
             <a aria-label="Facebook" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"></path>
-              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"></path></svg>
             </a>
             <a aria-label="YouTube" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center hover:text-brand-gold hover:border-brand-gold transition-colors" href="#">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
             </a>
           </div>
         </div>
       </div>
-      <!-- Bottom Bar -->
       <div class="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-        <p class="">© 2025 Liguilla de Básquetbol Cañete. Todos los derechos reservados.</p>
-        <p class="">Pasión por el Baloncesto Local • Diseñado para Alta Competencia</p>
+        <p>© 2025 Liguilla de Básquetbol Cañete. Todos los derechos reservados.</p>
+        <p>Pasión por el Baloncesto Local • Diseñado para Alta Competencia</p>
       </div>
     </div>
   </footer>
-  <script class="">
+
+  <script>
+    function toggleRoster(id) {
+      const roster = document.getElementById(id);
+      if (roster) roster.classList.toggle('hidden');
+    }
+
+    const searchInput = document.getElementById('teamSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const teamCards = document.querySelectorAll('.team-card');
+    const noTeamsMsg = document.getElementById('noTeamsMessage');
+    let currentFilter = 'all';
+
+    function filterTeams() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+      if (query.length > 0) clearBtn.classList.remove('hidden');
+      else clearBtn.classList.add('hidden');
+
+      teamCards.forEach(card => {
+        const teamData = card.getAttribute('data-team') || '';
+        const streak = card.getAttribute('data-streak') || '';
+        const isPlayoff = card.getAttribute('data-playoff') === 'true';
+        const matchesQuery = teamData.includes(query);
+        let matchesPill = true;
+        if (currentFilter === 'playoffs') matchesPill = isPlayoff;
+        else if (currentFilter === 'streak') matchesPill = streak === 'win';
+
+        if (matchesQuery && matchesPill) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noTeamsMsg.classList.remove('hidden');
+        noTeamsMsg.classList.add('flex');
+      } else {
+        noTeamsMsg.classList.add('hidden');
+        noTeamsMsg.classList.remove('flex');
+      }
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterTeams);
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        filterTeams();
+      });
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('active-pill', 'bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.add('active-pill', 'bg-primary', 'text-on-primary');
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        currentFilter = pill.getAttribute('data-filter') || 'all';
+        filterTeams();
+      });
+    });
+
+    function resetFilters() {
+      if (searchInput) searchInput.value = '';
+      currentFilter = 'all';
+      filterPills.forEach((p, index) => {
+        if (index === 0) {
+          p.classList.add('active-pill', 'bg-primary', 'text-on-primary');
+          p.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        } else {
+          p.classList.remove('active-pill', 'bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      });
+      filterTeams();
+    }
+
     (function() {
       const toggle = document.getElementById('mobile-menu-toggle');
       const drawer = document.getElementById('mobile-drawer');
@@ -1070,18 +1017,10 @@
         drawer.classList.add('hidden');
         document.body.style.overflow = '';
       }
-      if (toggle) {
-        toggle.addEventListener('click', openMenu);
-      }
-      if (closeBtn) {
-        closeBtn.addEventListener('click', closeMenu);
-      }
-      if (backdrop) {
-        backdrop.addEventListener('click', closeMenu);
-      }
-      links.forEach(link => {
-        link.addEventListener('click', closeMenu);
-      });
+      if (toggle) toggle.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+      links.forEach(link => link.addEventListener('click', closeMenu));
     })();
   </script>
 </body>

@@ -194,37 +194,67 @@
     </div>
   </header>
 
-  <div id="mobile-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300">
-    <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
-    <div class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424] border-l border-brand-gold/30 shadow-2xl flex flex-col p-6 z-10">
-      <div class="flex items-center justify-between pb-4 border-b border-gray-800">
-        <div class="flex items-center gap-2"><span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span></div>
-        <button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900 transition-colors">
+  <!-- Mobile Drawer con transición lateral y Glassmorphism Fintech -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300">
+    <!-- Backdrop difuminado con fade suave -->
+    <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Panel lateral deslizante (Off-canvas) -->
+    <div id="mobile-drawer-panel" class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424]/95 backdrop-blur-xl border-l border-brand-gold/30 shadow-[-10px_0_30px_rgba(0,0,0,0.8)] flex flex-col p-6 z-10 translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
+      
+      <!-- Encabezado del Drawer -->
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800/80">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
+          <span class="font-sport font-bold text-sm text-white tracking-wider">MENÚ OFICIAL</span>
+        </div>
+        <button id="mobile-drawer-close" aria-label="Cerrar menú" class="p-1.5 rounded-lg text-gray-400 hover:text-brand-gold hover:bg-gray-900/80 hover:scale-110 active:scale-95 transition-all duration-200">
           <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
+
+      <!-- Navegación -->
       <nav class="mt-6 flex flex-col gap-3">
-        <a href="index.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm">
-          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-          </svg>Inicio
+        <!-- Inicio -->
+        <a href="index.html" class="mobile-nav-link group flex items-center justify-between px-4 py-3.5 rounded-xl bg-gray-900/40 border border-gray-800/80 text-gray-200 hover:text-brand-gold hover:border-brand-gold/50 hover:bg-gray-800/50 hover:translate-x-1 shadow-sm transition-all duration-200 font-sport font-semibold text-sm">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-brand-gold transition-transform group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            <span>Inicio</span>
+          </div>
+          <span class="text-xs text-brand-gold/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all">→</span>
         </a>
-        <a href="cronograma.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-800 text-gray-200 hover:text-brand-gold hover:border-brand-gold/40 transition-all font-sport font-semibold text-sm">
-          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>Cronograma de Juegos
+
+        <!-- Fixture -->
+        <a href="cronograma.html" class="mobile-nav-link group flex items-center justify-between px-4 py-3.5 rounded-xl bg-gray-900/40 border border-gray-800/80 text-gray-200 hover:text-brand-gold hover:border-brand-gold/50 hover:bg-gray-800/50 hover:translate-x-1 shadow-sm transition-all duration-200 font-sport font-semibold text-sm">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-brand-gold transition-transform group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span>Cronograma de Juegos</span>
+          </div>
+          <span class="text-xs text-brand-gold/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all">→</span>
         </a>
-        <a href="equipos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-900/90 border border-brand-gold/60 text-brand-gold transition-all font-sport font-semibold text-sm">
-          <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>Equipos Participantes
+
+        <!-- Equipos: ACTIVO -->
+        <a href="equipos.html" class="mobile-nav-link group flex items-center justify-between px-4 py-3.5 rounded-xl bg-gray-900/90 border border-brand-gold/70 text-brand-gold shadow-lg shadow-brand-gold/10 font-sport font-semibold text-sm transition-all duration-200">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+            <span>Equipos Participantes</span>
+          </div>
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
         </a>
       </nav>
-      <div class="mt-auto pt-6 border-t border-gray-800 text-xs text-gray-500 text-center">
+
+      <!-- Pie del Drawer -->
+      <div class="mt-auto pt-6 border-t border-gray-800/80 text-xs text-gray-500 text-center">
         <span class="text-brand-gold font-bold">Liguilla Cañete 2026</span>
-        <p class="mt-1 text-[11px]">Polideportivo Beto Di Laura</p>
+        <p class="mt-1 text-[11px] text-gray-400">Polideportivo Beto Di Laura</p>
       </div>
     </div>
   </div>
@@ -920,6 +950,39 @@
     </div>
   </footer>
 
+  <script>
+    (function() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const panel = document.getElementById('mobile-drawer-panel');
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      const links = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        drawer.classList.remove('pointer-events-none');
+        backdrop.classList.remove('pointer-events-none', 'opacity-0');
+        backdrop.classList.add('pointer-events-auto', 'opacity-100');
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        panel.classList.remove('translate-x-0');
+        panel.classList.add('translate-x-full');
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.add('pointer-events-none');
+        document.body.style.overflow = '';
+      }
+
+      if (toggle) toggle.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+      links.forEach(link => link.addEventListener('click', closeMenu));
+    })();
+  </script>
   <script>
     function toggleRoster(id) {
       const roster = document.getElementById(id);

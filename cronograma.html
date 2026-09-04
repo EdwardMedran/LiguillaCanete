@@ -267,7 +267,7 @@
             <span class="inline-flex w-2 h-2 rounded-full bg-primary-container"></span>
             <span class="font-label-xs text-label-xs uppercase text-primary-fixed tracking-widest">Fixture 2026</span>
           </div>
-          <span class="font-label-xs text-label-xs text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded-full">8 Equipos • Fase Regular</span>
+          <span class="font-label-xs text-label-xs text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded-full">6 Equipos • Fase Regular</span>
         </div>
         <h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface tracking-wide">Cronograma Oficial</h1>
         <p class="font-body-sm text-body-sm text-on-surface-variant">Sigue la programación, marcadores consolidados y próximos choques en el coliseo comunal.</p>
@@ -315,123 +315,158 @@
         </div>
         <div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded-lg">
           <span class="material-symbols-outlined text-[16px] text-primary">sports_basketball</span>
-          <span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">4 Encuentros</span>
+          <span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">3 Encuentros</span>
         </div>
       </section>
 
+      <!-- Match Cards List (3 Encuentros: Varones - Damas - Varones) -->
       <section class="px-gutter-mobile py-space-xs flex flex-col gap-space-sm" id="matches-container">
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm">
+        <!-- Partido 1 (15:00 hrs) - VARONES (Finalizado) -->
+        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm border border-gray-800/60">
           <div class="flex items-center justify-between">
-            <div class="flex items-center gap-space-xs text-on-surface-variant">
-              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
-              <span class="font-label-md text-label-md text-on-surface">Sábado 15:00 hrs</span>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider bg-secondary-container/40 text-secondary-fixed border border-secondary-container/60">
+                Varones
+              </span>
+              <div class="flex items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[15px]">schedule</span>
+                <span class="font-label-md text-label-md text-on-surface font-semibold">15:00 hrs</span>
+              </div>
             </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold"> Finalizado </span>
+            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold">
+              Finalizado
+            </span>
           </div>
+
           <div class="flex items-center gap-1 text-on-surface-variant">
             <span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span>
             <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Polideportivo Beto Di Laura</span>
           </div>
+
           <div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
             <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">sports_martial_arts</span></div><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Gladiadores</span>
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+                <span class="material-symbols-outlined text-[18px]">sports_martial_arts</span>
+              </div>
+              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Gladiadores</span>
             </div>
-            <div class="flex items-center gap-1 px-space-xs shrink-0"><span class="font-stat-counter text-stat-counter text-primary font-bold">78</span><span class="font-label-xs text-label-xs text-outline">-</span><span class="font-stat-counter text-stat-counter text-on-surface-variant font-bold">74</span></div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right"><span class="font-label-md text-[12px] uppercase text-on-surface-variant leading-tight font-bold">Fénix Basket</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">local_fire_department</span></div>
+            <div class="flex items-center gap-1 px-space-xs shrink-0">
+              <span class="font-stat-counter text-stat-counter text-primary font-bold">78</span>
+              <span class="font-label-xs text-label-xs text-outline">-</span>
+              <span class="font-stat-counter text-stat-counter text-on-surface-variant font-bold">74</span>
+            </div>
+            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
+              <span class="font-label-md text-[12px] uppercase text-on-surface-variant leading-tight font-bold truncate">Warriors Imp.</span>
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px]">swords</span>
+              </div>
             </div>
           </div>
+
           <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
             <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: C. Silva (24 pts)</span>
-            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Planilla oficial archivada en mesa de control del Polideportivo.')" type="button"> Ver Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Planilla oficial archivada en mesa de control.')" type="button">
+              Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
             </button>
           </div>
         </article>
 
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm">
+        <!-- Partido 2 (16:45 hrs) - DAMAS (Finalizado) -->
+        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm border border-brand-gold/20">
           <div class="flex items-center justify-between">
-            <div class="flex items-center gap-space-xs text-on-surface-variant">
-              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
-              <span class="font-label-md text-label-md text-on-surface">Sábado 16:45 hrs</span>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider bg-brand-gold/15 text-brand-gold border border-brand-gold/30">
+                Damas
+              </span>
+              <div class="flex items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[15px]">schedule</span>
+                <span class="font-label-md text-label-md text-on-surface font-semibold">16:45 hrs</span>
+              </div>
             </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold"> Finalizado </span>
+            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold">
+              Finalizado
+            </span>
           </div>
+
           <div class="flex items-center gap-1 text-on-surface-variant">
             <span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span>
             <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Polideportivo Beto Di Laura</span>
           </div>
+
           <div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
             <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">shield</span></div><span class="font-label-md text-[12px] uppercase text-on-surface-variant leading-tight font-bold">Warriors Imp.</span>
+              <div class="w-8 h-8 rounded-lg bg-tertiary-container flex items-center justify-center shrink-0 text-on-tertiary-container">
+                <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+              </div>
+              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Fénix Fem</span>
             </div>
-            <div class="flex items-center gap-1 px-space-xs shrink-0"><span class="font-stat-counter text-stat-counter text-on-surface-variant font-bold">65</span><span class="font-label-xs text-label-xs text-outline">-</span><span class="font-stat-counter text-stat-counter text-primary font-bold">82</span></div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right"><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Lobos del Sur</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">pets</span></div>
+            <div class="flex items-center gap-1 px-space-xs shrink-0">
+              <span class="font-stat-counter text-stat-counter text-primary font-bold">62</span>
+              <span class="font-label-xs text-label-xs text-outline">-</span>
+              <span class="font-stat-counter text-stat-counter text-on-surface-variant font-bold">54</span>
+            </div>
+            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
+              <span class="font-label-md text-[12px] uppercase text-on-surface-variant leading-tight font-bold truncate">Reinas Valle</span>
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-purple-400">
+                <span class="material-symbols-outlined text-[18px]">crown</span>
+              </div>
             </div>
           </div>
+
           <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Triples: M. Paredes (5 triples)</span>
-            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Estadísticas finales consolidadas por el comité técnico.')" type="button"> Ver Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotadora: V. Fuentes (19 pts)</span>
+            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Estadísticas oficiales de la rama femenina consolidadas.')" type="button">
+              Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
             </button>
           </div>
         </article>
 
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-lg flex flex-col gap-space-sm bg-gradient-to-br from-surface-container via-surface-container to-surface-container-high">
+        <!-- Partido 3 (18:30 hrs) - VARONES (Por Disputar - Match Estelar) -->
+        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-lg flex flex-col gap-space-sm bg-gradient-to-br from-surface-container via-surface-container to-surface-container-high border border-primary/40">
           <div class="flex items-center justify-between">
-            <div class="flex items-center gap-space-xs text-primary">
-              <span class="material-symbols-outlined text-[16px]">schedule</span>
-              <span class="font-label-md text-label-md text-on-surface font-bold">Sábado 18:30 hrs</span>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider bg-secondary-container/40 text-secondary-fixed border border-secondary-container/60">
+                Varones
+              </span>
+              <div class="flex items-center gap-1 text-primary">
+                <span class="material-symbols-outlined text-[15px]">schedule</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">18:30 hrs</span>
+              </div>
             </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-primary-container text-on-primary-container font-bold shadow-sm"> Por Disputar </span>
+            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-primary-container text-on-primary-container font-bold shadow-sm">
+              Por Disputar
+            </span>
           </div>
+
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-1 text-on-surface-variant">
               <span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span>
               <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Polideportivo Beto Di Laura</span>
             </div>
-            <div class="flex items-center gap-1 text-secondary font-label-xs text-label-xs uppercase"></div>
           </div>
+
           <div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
             <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm shrink-0"><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">military_tech</span></div><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Titanes Cañete</span>
+              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm shrink-0">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+              </div>
+              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Titanes Cañete</span>
             </div>
-            <div class="flex items-center justify-center px-space-xs shrink-0"><span class="font-label-xs text-label-xs text-primary font-bold px-1.5 py-0.5 rounded bg-surface-container-high">VS</span></div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right"><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Halcones Valle</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm shrink-0"><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span></div>
+            <div class="flex items-center justify-center px-space-xs shrink-0">
+              <span class="font-label-xs text-label-xs text-primary font-bold px-1.5 py-0.5 rounded bg-surface-container-high">VS</span>
+            </div>
+            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
+              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Halcones Valle</span>
+              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm shrink-0">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+              </div>
             </div>
           </div>
+
           <div class="flex items-center justify-between pt-space-2xs">
             <span class="font-body-sm text-body-sm text-on-surface-variant">Apertura de gradas: 17:50 hrs</span>
             <button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-label-md text-label-md uppercase transition-colors" onclick="this.innerHTML='&lt;span class=\'material-symbols-outlined text-[16px] text-primary\'&gt;check&lt;/span&gt; Recordatorio Fijado'" type="button">
               <span class="material-symbols-outlined text-[16px] text-primary">notifications_active</span> Recordar
-            </button>
-          </div>
-        </article>
-
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-space-xs text-on-surface-variant">
-              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
-              <span class="font-label-md text-label-md text-on-surface font-medium">Sábado 20:15 hrs</span>
-            </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-secondary-container/80 text-on-secondary-container font-bold"> Por Disputar </span>
-          </div>
-          <div class="flex items-center gap-1 text-on-surface-variant">
-            <span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Polideportivo Beto Di Laura</span>
-          </div>
-          <div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
-            <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary"><span class="material-symbols-outlined text-[18px]">sports_kabaddi</span></div><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Black Mambas</span>
-            </div>
-            <div class="flex items-center justify-center px-space-xs shrink-0"><span class="font-label-xs text-label-xs text-outline-variant font-bold px-1.5 py-0.5 rounded bg-surface-container-high">VS</span></div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right"><span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold">Águilas Puerto</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-secondary"><span class="material-symbols-outlined text-[18px]">wb_twilight</span></div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Duelo directo por tabla baja</span>
-            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Estadísticas de enfrentamientos previos: 1 victoria por bando.')" type="button"> Historial <span class="material-symbols-outlined text-[14px]">insights</span>
             </button>
           </div>
         </article>

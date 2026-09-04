@@ -208,6 +208,17 @@
         <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
         <p class="text-gray-400 text-sm mt-3"> Clasifican a la ronda final de Playoffs los <span class="text-brand-gold font-bold">4 mejores lugares</span> al cabo de 8 fechas. </p>
       </div>
+      <!-- Toggle Segmentado de Categoría (Fintech Pill Switcher) -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex p-1 rounded-xl bg-gray-900/90 border border-gray-800 backdrop-blur-md shadow-inner">
+          <button id="tab-varones" onclick="cambiarCategoria('varones')" type="button" class="px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 bg-brand-gold text-black shadow-md shadow-brand-gold/20">
+            Varones (6 Equipos)
+          </button>
+          <button id="tab-damas" onclick="cambiarCategoria('damas')" type="button" class="px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 text-gray-400 hover:text-brand-gold">
+            Damas (4 Equipos)
+          </button>
+        </div>
+      </div>
       <!-- Responsive Table Card -->
       <div class="bg-brand-darkSurface border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
         <div class="overflow-x-auto">
@@ -227,13 +238,14 @@
               </tr>
             </thead>
             <!-- Table Body -->
-            <tbody class="divide-y divide-gray-800/60 font-sans">
-              <!-- Pos 1 (Playoffs) -->
+            <!-- Tabla Varones (Visible por defecto) -->
+            <tbody id="tbody-varones" class="divide-y divide-gray-800/60 font-sans">
+              <!-- Pos 1: Titanes -->
               <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
                 <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">1</td>
                 <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-blue-950 border border-blue-500/40 flex items-center justify-center font-sport text-xs text-blue-300">TC</div>
-                  <span class="">Titanes Cañete</span>
+                  <span>Titanes Cañete</span>
                   <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
@@ -244,12 +256,12 @@
                 <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+72</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
               </tr>
-              <!-- Pos 2 (Playoffs) -->
+              <!-- Pos 2: Halcones -->
               <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
                 <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">2</td>
                 <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-amber-950 border border-amber-500/40 flex items-center justify-center font-sport text-xs text-amber-300">HV</div>
-                  <span class="">Halcones del Valle</span>
+                  <span>Halcones del Valle</span>
                   <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Playoffs</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
@@ -260,12 +272,12 @@
                 <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+45</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">11</td>
               </tr>
-              <!-- Pos 3 (Playoffs) -->
+              <!-- Pos 3: Black Mambas -->
               <tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
                 <td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">3</td>
                 <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-purple-950 border border-purple-500/40 flex items-center justify-center font-sport text-xs text-purple-300">BM</div>
-                  <span class="">Black Mambas</span>
+                  <span>Black Mambas</span>
                   <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
@@ -276,12 +288,12 @@
                 <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+20</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
               </tr>
-              <!-- Pos 4 (Playoffs) -->
+              <!-- Pos 4: Lobos del Sur -->
               <tr class="table-row-hover bg-brand-accentBlue/5 transition-colors border-l-4 border-l-brand-accentBlue">
                 <td class="py-4 px-4 text-center font-sport font-bold text-brand-accentBlue">4</td>
                 <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-slate-800 border border-slate-500/40 flex items-center justify-center font-sport text-xs text-slate-300">LS</div>
-                  <span class="">Lobos del Sur</span>
+                  <span>Lobos del Sur</span>
                   <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-blue-900/30 text-blue-300 rounded">Playoffs</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
@@ -292,12 +304,12 @@
                 <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+17</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-white">10</td>
               </tr>
-              <!-- Pos 5 -->
+              <!-- Pos 5: Warriors -->
               <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
                 <td class="py-4 px-4 text-center font-sport text-gray-400">5</td>
                 <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-yellow-950 border border-yellow-500/40 flex items-center justify-center font-sport text-xs text-yellow-300">WI</div>
-                  <span class="">Warriors Imperial</span>
+                  <span>Warriors Imperial</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
                 <td class="py-4 px-4 text-center font-mono text-green-400">3</td>
@@ -307,27 +319,12 @@
                 <td class="py-4 px-4 text-center font-mono text-red-400">-4</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">9</td>
               </tr>
-              <!-- Pos 6 -->
+              <!-- Pos 6: Gladiadores -->
               <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
                 <td class="py-4 px-4 text-center font-sport text-gray-400">6</td>
                 <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-                  <div class="w-7 h-7 rounded bg-orange-950 border border-orange-500/40 flex items-center justify-center font-sport text-xs text-orange-300">FB</div>
-                  <span class="">Fénix Basket</span>
-                </td>
-                <td class="py-4 px-4 text-center font-mono">6</td>
-                <td class="py-4 px-4 text-center font-mono text-green-400">2</td>
-                <td class="py-4 px-4 text-center font-mono text-red-400">4</td>
-                <td class="py-4 px-4 text-center font-mono">405</td>
-                <td class="py-4 px-4 text-center font-mono">440</td>
-                <td class="py-4 px-4 text-center font-mono text-red-400">-35</td>
-                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">8</td>
-              </tr>
-              <!-- Pos 7 -->
-              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                <td class="py-4 px-4 text-center font-sport text-gray-400">7</td>
-                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
                   <div class="w-7 h-7 rounded bg-red-950 border border-red-500/40 flex items-center justify-center font-sport text-xs text-red-300">GL</div>
-                  <span class="">Gladiadores</span>
+                  <span>Gladiadores</span>
                 </td>
                 <td class="py-4 px-4 text-center font-mono">6</td>
                 <td class="py-4 px-4 text-center font-mono text-green-400">1</td>
@@ -337,20 +334,71 @@
                 <td class="py-4 px-4 text-center font-mono text-red-400">-55</td>
                 <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
               </tr>
-              <!-- Pos 8 -->
-              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
-                <td class="py-4 px-4 text-center font-sport text-gray-400">8</td>
-                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
-                  <div class="w-7 h-7 rounded bg-teal-950 border border-teal-500/40 flex items-center justify-center font-sport text-xs text-teal-300">AP</div>
-                  <span class="">Águilas del Puerto</span>
+            </tbody>
+
+            <!-- Tabla Damas (Oculta por defecto) -->
+            <tbody id="tbody-damas" class="divide-y divide-gray-800/60 font-sans hidden">
+              <!-- Pos 1: Fénix Fem -->
+              <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
+                <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">1</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-orange-950 border border-orange-500/40 flex items-center justify-center font-sport text-xs text-orange-300">FF</div>
+                  <span>Fénix Femenino</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Finalista</span>
                 </td>
-                <td class="py-4 px-4 text-center font-mono">6</td>
+                <td class="py-4 px-4 text-center font-mono">4</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">4</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">0</td>
+                <td class="py-4 px-4 text-center font-mono">248</td>
+                <td class="py-4 px-4 text-center font-mono">190</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+58</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">8</td>
+              </tr>
+              <!-- Pos 2: Águilas Fem -->
+              <tr class="table-row-hover bg-brand-gold/5 transition-colors border-l-4 border-l-brand-gold">
+                <td class="py-4 px-4 text-center font-sport font-black text-brand-gold">2</td>
+                <td class="py-4 px-6 font-bold text-white flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-teal-950 border border-teal-500/40 flex items-center justify-center font-sport text-xs text-teal-300">AF</div>
+                  <span>Águilas del Puerto (Fem)</span>
+                  <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-brand-gold/20 text-brand-gold rounded">Finalista</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">4</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">3</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">1</td>
+                <td class="py-4 px-4 text-center font-mono">215</td>
+                <td class="py-4 px-4 text-center font-mono">198</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400 font-bold">+17</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-brand-gold">7</td>
+              </tr>
+              <!-- Pos 3: Reinas del Valle -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">3</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-purple-950 border border-purple-500/40 flex items-center justify-center font-sport text-xs text-purple-300">RV</div>
+                  <span>Reinas del Valle</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">4</td>
                 <td class="py-4 px-4 text-center font-mono text-green-400">1</td>
-                <td class="py-4 px-4 text-center font-mono text-red-400">5</td>
-                <td class="py-4 px-4 text-center font-mono">380</td>
-                <td class="py-4 px-4 text-center font-mono">440</td>
-                <td class="py-4 px-4 text-center font-mono text-red-400">-60</td>
-                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">7</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">3</td>
+                <td class="py-4 px-4 text-center font-mono">180</td>
+                <td class="py-4 px-4 text-center font-mono">210</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-30</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-300">5</td>
+              </tr>
+              <!-- Pos 4: Valkirias Cañete -->
+              <tr class="table-row-hover transition-colors border-l-4 border-l-transparent">
+                <td class="py-4 px-4 text-center font-sport text-gray-400">4</td>
+                <td class="py-4 px-6 font-semibold text-gray-200 flex items-center gap-3">
+                  <div class="w-7 h-7 rounded bg-rose-950 border border-rose-500/40 flex items-center justify-center font-sport text-xs text-rose-300">VC</div>
+                  <span>Valkirias Cañete</span>
+                </td>
+                <td class="py-4 px-4 text-center font-mono">4</td>
+                <td class="py-4 px-4 text-center font-mono text-green-400">0</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">4</td>
+                <td class="py-4 px-4 text-center font-mono">160</td>
+                <td class="py-4 px-4 text-center font-mono">205</td>
+                <td class="py-4 px-4 text-center font-mono text-red-400">-45</td>
+                <td class="py-4 px-6 text-center font-sport font-black text-lg text-gray-400">4</td>
               </tr>
             </tbody>
           </table>
@@ -526,6 +574,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- script para cambiar entre tabla de varones o damas -->
+   <script>
+    function cambiarCategoria(cat) {
+      const btnVarones = document.getElementById('tab-varones');
+      const btnDamas = document.getElementById('tab-damas');
+      const tbodyVarones = document.getElementById('tbody-varones');
+      const tbodyDamas = document.getElementById('tbody-damas');
+
+      if (cat === 'varones') {
+        tbodyVarones.classList.remove('hidden');
+        tbodyDamas.classList.add('hidden');
+        btnVarones.className = 'px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 bg-brand-gold text-black shadow-md shadow-brand-gold/20';
+        btnDamas.className = 'px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 text-gray-400 hover:text-brand-gold';
+      } else {
+        tbodyDamas.classList.remove('hidden');
+        tbodyVarones.classList.add('hidden');
+        btnDamas.className = 'px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 bg-brand-gold text-black shadow-md shadow-brand-gold/20';
+        btnVarones.className = 'px-5 py-2 rounded-lg font-sport text-xs font-bold uppercase transition-all duration-200 text-gray-400 hover:text-brand-gold';
+      }
+    }
+  </script>
 
   <script>
     (function() {

@@ -170,9 +170,9 @@
   <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="index.html">
-        <img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA072gen3gEq7kX_nMgArhrW6VGHZ1ppVTgfKF15QKRA4Q3dJJHaJslkiOEKlLH765MnLQVoxfutb__-LvTrV86VMPjgaiyYstSuRFnTjZorDWcjBFnuocV4403alWz-xIzTVg1rY5Ys1V4aulI6G7qSAupIyBN3-B9-50_5hDybRVIsrW8JXTf5juOpMJY48da_IviuB0DpVqMP_9FCYj0eSQqC6c5AQxqqkPWL9LIaEQUocTF1ba_Q-1LEkU9wWjcpw">
+        <img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="img/Rapibasket.jpeg">
         <div class="flex flex-col">
-          <span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">LIGUILLA CAÑETE</span>
+          <span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">RAPIBASKET CAÑETE</span>
           <span class="text-[10px] font-semibold tracking-widest text-brand-gold uppercase mt-0.5">Básquetbol de Primera</span>
         </div>
       </a>
@@ -253,7 +253,7 @@
 
       <!-- Pie del Drawer -->
       <div class="mt-auto pt-6 border-t border-gray-800/80 text-xs text-gray-500 text-center">
-        <span class="text-brand-gold font-bold">Liguilla Cañete 2026</span>
+        <span class="text-brand-gold font-bold">Rapibasket Cañete 2026</span>
         <p class="mt-1 text-[11px] text-gray-400">Polideportivo Beto Di Laura</p>
       </div>
     </div>
@@ -264,58 +264,29 @@
       <section class="px-gutter-mobile pt-4 pb-space-xs flex flex-col gap-space-2xs">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-space-2xs">
-            <span class="inline-flex w-2 h-2 rounded-full bg-primary-container"></span>
-            <span class="font-label-xs text-label-xs uppercase text-primary-fixed tracking-widest">Fixture 2026</span>
           </div>
-          <span class="font-label-xs text-label-xs text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded-full">6 Equipos • Fase Regular</span>
         </div>
         <h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface tracking-wide">Cronograma Oficial</h1>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">Sigue la programación, marcadores consolidados y próximos choques en el coliseo comunal.</p>
-      </section>
-
-      <section class="px-gutter-mobile py-space-xs">
-        <div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex items-center gap-space-md">
-          <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
-            <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">stadium</span>
-          </div>
-          <div class="flex flex-col min-w-0 flex-1">
-            <div class="flex items-center gap-1.5">
-              <span class="font-label-xs text-label-xs uppercase text-primary font-bold">Sede Única Oficial</span>
-              <span class="w-1 h-1 rounded-full bg-outline"></span>
-              <span class="font-label-xs text-label-xs text-on-surface-variant">Cañete Centro</span>
-            </div>
-            <span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Polideportivo Beto Di Laura</span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Capacidad: 100 espectadores&nbsp;</span>
-          </div>
-        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Sigue la programación, marcadores consolidados y próximos choques en el coliseo.</p>
       </section>
 
       <section class="py-space-sm">
         <div class="flex items-center justify-between px-gutter-mobile pb-space-2xs">
           <span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Seleccionar Fecha</span>
-          <span class="font-label-xs text-label-xs text-primary-fixed">Desliza para ver más</span>
         </div>
         <div class="flex gap-space-xs overflow-x-auto px-gutter-mobile no-scrollbar py-space-2xs" id="rounds-scroller">
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r1')" type="button"> Jornada 1 </button>
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r2')" type="button"> Jornada 2 </button>
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r3')" type="button"> Jornada 3 </button>
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r4')" type="button"> Jornada 4 </button>
-          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-primary text-on-primary font-bold shadow-lg shadow-primary-container/20 active:scale-95" onclick="switchRound(this, 'r5')" type="button"> Jornada 5 </button>
-          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r6')" type="button"> Jornada 6 </button>
-          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r7')" type="button"> Jornada 7 </button>
-          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r8')" type="button"> Jornada 8 </button>
-          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-secondary hover:text-on-surface active:scale-95" onclick="switchRound(this, 'rplayoffs')" type="button"> Playoffs </button>
         </div>
       </section>
 
-      <section class="px-gutter-mobile py-space-xs flex items-center justify-between">
+    <section  section class="px-gutter-mobile py-space-xs flex items-center justify-between">
         <div class="flex items-center gap-space-xs">
           <span class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide" id="active-round-label">Jornada 5</span>
           <span class="font-body-sm text-body-sm text-on-surface-variant">• Sábado 24 Mayo</span>
         </div>
-        <div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-1 rounded-lg">
-          <span class="material-symbols-outlined text-[16px] text-primary">sports_basketball</span>
-          <span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">3 Encuentros</span>
         </div>
       </section>
 
@@ -365,9 +336,6 @@
 
           <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
             <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: C. Silva (24 pts)</span>
-            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Planilla oficial archivada en mesa de control.')" type="button">
-              Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </button>
           </div>
         </article>
 
@@ -415,9 +383,6 @@
 
           <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
             <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotadora: V. Fuentes (19 pts)</span>
-            <button class="text-primary hover:text-primary-fixed flex items-center gap-1 font-label-xs text-label-xs uppercase tracking-wider" onclick="alert('Estadísticas oficiales de la rama femenina consolidadas.')" type="button">
-              Ficha <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </button>
           </div>
         </article>
 
@@ -464,10 +429,8 @@
           </div>
 
           <div class="flex items-center justify-between pt-space-2xs">
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Apertura de gradas: 17:50 hrs</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador:</span>
             <button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-label-md text-label-md uppercase transition-colors" onclick="this.innerHTML='&lt;span class=\'material-symbols-outlined text-[16px] text-primary\'&gt;check&lt;/span&gt; Recordatorio Fijado'" type="button">
-              <span class="material-symbols-outlined text-[16px] text-primary">notifications_active</span> Recordar
-            </button>
           </div>
         </article>
       </section>
@@ -495,32 +458,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOZ_EJyTP4V7Cl9LUK0wiQVeBC82vavKhNWsXaYDFs0JEKgaG2dlF2EAEgdM0zY4g3nK6Ss7FEtef4h9ZxajKwd9as_1ZCvO50wxWsQT8cukz6c21bMytfJHZ5cv2CeMCN45s_dFCrMaMHqiqg-wrnlTk7WpGQfGEc75ZUL4FAyKDIol9la6yVm_kLxTVr9eWnoZ26WJ4i-FFr_Fe6wzi0zotvG19JRjzlPVYu1eDExao1UfEdUptlOTVDLVl8Nxm6g">
-            <span class="font-sport font-black text-lg text-white">LIGUILLA CAÑETE</span>
+            <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="img/Rapibasket.jpeg">
+            <span class="font-sport font-black text-lg text-white">RAPIBASKET CAÑETE</span>
           </div>
-          <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto semiprofesional más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>
-        </div>
-        <div>
-          <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Navegación</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="hover:text-brand-gold transition-colors" href="equipos.html">Equipos 2025</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="cronograma.html">Fixture y Horarios</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="index.html#posiciones">Tabla General</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="index.html#resultados">Resultados &amp; MVP</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="index.html#galeria">Galería de Partidos</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Torneo Oficial</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="hover:text-brand-gold transition-colors" href="#">Reglamento FIBA Adaptado</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="#">Tabla de Sanciones</a></li>
-            <li><a class="hover:text-brand-gold transition-colors" href="#">Inscripción para Temporada Clausura</a></li>
-          </ul>
+          <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>
         </div>
         <div>
           <h4 class="font-sport font-bold text-sm text-white uppercase tracking-wider mb-4">Contacto &amp; Cancha</h4>
-          <p class="text-xs text-gray-400 mb-2">Sede Única: Polideportivo Beto Di Laura, Cañete, Región del Biobío.</p>
           <p class="text-xs text-gray-300 font-medium">contacto@liguillacanete.cl</p>
           <p class="text-xs text-gray-300 font-medium mt-1">+56 9 8765 4321</p>
           <div class="flex items-center gap-3 mt-4">
@@ -537,8 +481,8 @@
         </div>
       </div>
       <div class="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-        <p>© 2025 Liguilla de Básquetbol Cañete. Todos los derechos reservados.</p>
-        <p>Pasión por el Baloncesto Local • Diseñado para Alta Competencia</p>
+        <p>© 2026 Rapibasket Cañete. Todos los derechos reservados.</p>
+        <p>Pasión por el Baloncesto Local</p>
       </div>
     </div>
   </footer>
